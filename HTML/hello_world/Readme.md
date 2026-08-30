@@ -16,7 +16,23 @@ project-folder/
 The `index.html` file contains:
 
 ```html
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+<body>
+
+    <h1>Hello World!</h1>
+ 
+
+</body>
+</html>
+
+
+
 ```
 
 ## 🚀 How to Run
@@ -34,8 +50,4 @@ The `index.html` file contains:
 
 ## 📌 Purpose
 
-This project is a basic introduction to HTML and demonstrates how to display a heading on a webpage.
-
-## 📄 License
-
-This project is open for learning and educational purposes.
+This project is a basic introduction to HTML as Task 1.
