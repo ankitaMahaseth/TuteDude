@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /* align-content: center; */
+}
+.page_left_box{
+    width:50%;
+    height:100vh;
+    background-color: skyblue; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page_left_box img {
+    width: 50%;
+    max-width: 500px;
+}
+.page_right_box {
+    width: 50%;
+    height: 100vh;
+    background-color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Title */
+.form_title{
+    text-align: center;
+    margin-bottom: 30px;
+    display: block;
+}
+.form_title h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.form_title p {
+    color: gray;
+    font-size: 16px;
+}
+/* Form */
+.form_data {
+    width: 350px;
+    display: block;
+}
+
+.form_data form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_data label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form_data input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    color: lightgray;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form_data .forget_password {
+    text-align: right;
+    margin-bottom: 20px;
+    color: #3498db;
+    cursor: pointer;
+}
+
+.form_data button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.verify_member{
+    margin-top: 10px;
+    text-align: center;
+}
+.verify_member a{
+    color: #3498db;
+}
