@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+/* Hamburger */
+
+.hamburger_container {
+    display: none;
+}
+
+.hamburger_btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger_btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+
+/* Mobile menu */
+
+.mobile_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 80vw;
+    /* height: calc(100vh - 73px); */
+    height: 100vh;
+    background-color: #000;
+    z-index: 1000;
+}
+
+.mobile_menu ul {
+    padding: 0;
+    /* margin: 50px; */
+    text-align: center;
+}
+
+.mobile_menu li {
+
+    display: block;
+    margin: 20px 0;
+}
+
+.mobile_menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar {
+    padding: 15px 5%;
+    position: relative;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25%;
+}
+
+ul {
+    list-style: none;
+    padding: 10px;
+}
+
+li {
+    display: inline;
+}
+
+ul > li > a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #222;
+}
+
+li > a:hover {
+    color: blue;
+}
+
+.user_btn {
+    background-color: lightcyan;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    color: blue;
+    float: right;
+    margin-top: 5px;
+}
+
+/* Main content */
+
+.main_content {
+    margin: 5%;
+}
+
+.hero_section_left {
+    width: 50%;
+    text-align: left;
+    float: left;
+}
+
+.hero_heading1 {
+    font-size: 40px;
+}
+
+.hero_heading2 {
+    color: blue;
+}
+
+.hero_para {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.book_btn {
+    margin-top: 15px;
+    padding: 15px 25px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero_section_right {
+    width: 50%;
+    float: right;
+}
+
+.hero_section_right img {
+    width: 80%;
+    height: auto;
+    float: right;
+}
+
+/* Clear floats */
+
+.main_content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Mobile */
+
+@media (max-width: 498px) {
+
+    /* .navbar {
+        padding: 15px 20px;
+    } */
+     nav{
+        display: none;
+     }
+    .hamburger_container {
+        display: block;
+        position: relative;
+        float: right;
+    }
+    .hamburger_container {
+        display: block;
+        position: relative;
+        float: right;
+    }
+
+    .mobile_menu {
+        display: none;
+    }
+
+    .hamburger_btn:focus + .mobile_menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user_btn {
+        display: none;
+    }
+
+    .main_content {
+        margin: 10% 5%;
+    }
+
+    .hero_section_left,
+    .hero_section_right {
+        width: 100%;
+        float: none;
+    }
+
+    .hero_section_left {
+        text-align: center;
+    }
+
+    .hero_heading1 {
+        font-size: 30px;
+    }
+
+    .hero_heading2 {
+        font-size: 28px;
+    }
+
+    .hero_para {
+        font-size: 15px;
+    }
+
+    .hero_section_right {
+        margin-top: 30px;
+    }
+
+    .hero_section_right img {
+        width: 100%;
+        float: none;
+    }
+}
+/* =========================
+   TABLET
+   ========================= */
+
+@media (min-width: 499px) and (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 3%;
+    }
+
+    nav {
+        margin-left: 5%;
+    }
+
+    ul > li > a {
+        margin-left: 8px;
+        font-size: 15px;
+    }
+
+    .user_btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Main content */
+
+    .main_content {
+        margin: 8% 5%;
+    }
+
+    .hero_section_left {
+        width: 50%;
+        float: left;
+    }
+
+    .hero_section_right {
+        width: 50%;
+        float: right;
+    }
+
+    .hero_heading1 {
+        font-size: 32px;
+    }
+
+    .hero_heading2 {
+        font-size: 28px;
+    }
+
+    .hero_para {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .book_btn {
+        padding: 12px 18px;
+    }
+
+    .hero_section_right img {
+        width: 95%;
+    }
+}
