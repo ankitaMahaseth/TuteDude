@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 30px;
+}
+.navbar{
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+}
+nav{
+   display: inline-block;
+   vertical-align: middle;
+   margin-left: 30%;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}
+ul>li>a {
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 18px;
+}
+li{
+    display: inline;
+    /* padding-right: 2%; */
+
+}
+li>a:hover{
+    color: white;
+}
+.user_btn{
+    /* display: inline-block; */
+    /* vertical-align:right; */
+    background-color:lightcyan;
+    padding: 1.5%;
+    border: none;
+    border-radius: 5%;
+    color: blue;
+    /* margin-bottom: 10px; */
+    float: right;
+}
+.main_content{
+    margin: 5% ;
+}
+.hero_section_1{
+    width: 50%;
+    text-align: left;
+    float: left;
+}
+.hero_heading1{
+    font-size: 40px;
+}
+.hero_heading2{
+color:blue
+}
+.hero_para{
+    margin-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.book_btn{
+    margin-top: 10px;
+    padding: 3%;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5%;
+}
+.book_btn:hover{
+    /* transform: scale(1.5); */
+    transition: 0.8s;
+    transform: rotate(-5deg) scale(1.2);
+}
+.hero_section_2{
+    width: 50%;
+    float: right;
+}
+.hero_section_2 img{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    float: right;
+}
