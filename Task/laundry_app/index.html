@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add_circle,info,remove_circle,check_circle,calendar_check,mail,call,location_on"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Laundry App</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+
+        <!-- Logo -->
+         <div class="logo">
+            <h2>Logo</h2>
+         </div>
+         
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <button class="user_btn">Username</button>
+        </div>
+        </div>
+        
+    </header>
+
+    <!-- Hero section -->
+     <section class="hero_section">
+        <div class="container">
+
+            <div class="hero_section_left">
+            
+                <h1 class="hero_heading1">Revitalize Your <br/> Clothes With Expert</h1>
+                <h1 class="hero_heading2">Laundry Services !</h1>
+                <p class="hero_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repudiandae nostrum voluptate quidem asperiores repellendus repellat impedit fuga fugiat dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, aut.</p>
+                <button class="book_btn"><span class="material-symbols-outlined">calendar_check</span> Book a service today !</button>
+            </div>
+
+            <div class="hero_section_right">
+                <div class="hero_section_img">
+                    <img src="assets/images/laundry_img.jpg" alt="laundry image"/>
+                </div>  
+            </div>
+        </div>
+     </section>
+
+     <!-- Service Overview Section -->
+     <section class="service_overView">
+        <div class="container">
+            <div class="overView_title">
+                <h1>Our Achievements</h1>
+            </div>
+            <div class="overView">
+                <h3>15+ <span>Laundry Service</span></h3>
+            </div>
+            <div class="overView">
+                <h3>240+ <span>Happy Customers</span></h3>
+            </div>
+            <div class="overView">
+                <h3>2+ Yrs <span>Experience</span></h3>
+            </div>
+        </div>
+     </section>
+
+     <!-- Booking Service Section -->
+      <section id="booking_service" class="booking_service">
+        <div class="container">
+
+        <!-- RIGHT SERVICE SECTION -->
+        <div class="card services-card">
+            <h1>Our Services</h1>
+            <p class="service_description">
+                Click on the add to cart button to add the services to your
+                cart or press skip
+            </p>
+            <hr>
+            
+            <!-- Services -->
+            <div class="service_info">
+                <table>
+                    <tbody id="service-data">
+                        <!-- JavaScript will insert service here -->
+                    </tbody>
+                </table>
+                <hr>
+                
+                <div class="important">
+                    <div class="info-msg" id="infoMessage">
+                        <span class="material-symbols-outlined">info</span>
+                        Add the items in the cart and book now.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- LEFT SERVICE SECTION -->
+             <div class="left-section">
+
+            <!-- Added Items -->
+            <div class="card cart-card">
+
+                <h2>Added Items</h2>
+
+                <div class="table-header">
+                    <span>S.No</span>
+                    <span>Services Name</span>
+                    <span>Price</span>
+                </div>
+
+                 <!-- show all services selected by user otherwise empty cart -->
+                <div id="cartItems">
+
+                </div>
+
+                <div class="total">
+                    <strong>Total Amount</strong>
+                    <strong  id="totalAmount">₹ 0</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Book Now -->
+            <form class="card booking-card" id="bookForm" novalidate >
+
+                <h2>Book Now</h2>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        placeholder="Your Name"
+                        required
+                        >
+                        <span class="error-message" id="usernameError"></span>
+                </div>
+                
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="email">Email ID</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email"
+                            required
+                            >
+                            <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tel">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="bookNowBtn">Book Now</button>
+
+                <!-- Error Message -->
+                <div id="errorMessage">
+                    <span class="material-symbols-outlined">info</span>
+                     Add at least one service to cart to book
+                </div>
+
+                <!-- // Success Message -->
+                <div id="successMessage">
+                    <span class="material-symbols-outlined">check_circle</span>
+                    Thank you for Booking the service. We will get back to you soon!
+                </div>
+            </form>
+
+        </div>
+    </div>        
+    </section>
+
+    <!-- Quality Description Section: -->
+    <section class="quality_description">
+        <div class="container">
+            <div class="quality">
+                <div class="quality_image">
+                    <img src="assets/images/premium_service.png" alt="Premium Service">
+                </div>
+                <div class="quality_details">
+                    <h2>Premium Service</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem soluta nobis ut incidunt. Distinctio, vero?</p>
+                </div>
+            </div>
+            <div class="quality">
+                <div class="quality_image">
+                    <img src="assets/images/quick_support.png" alt="Quick Support">
+                </div>
+                <div class="quality_details">
+                    <h2>Quick Support</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem soluta nobis ut incidunt. Distinctio, vero?</p>
+                </div>
+            </div>
+            <div class="quality">
+                <div class="quality_image">
+                    <img src="assets/images/delivery.jpg" alt="Hassle Free Delivery">
+                </div>
+                <div class="quality_details">
+                    <h2>Hassle Free Delivery</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem soluta nobis ut incidunt. Distinctio, vero?</p>
+                </div>
+            </div>
+            <div class="quality">
+                <div class="quality_image">
+                    <img src="assets/images/price.jpg" alt="Affordable Prices">
+                </div>
+                <div class="quality_details">
+                    <h2>Affordable Prices</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem soluta nobis ut incidunt. Distinctio, vero?</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="newsletter_subscription">
+        <div class="container">
+            <div class="newsletter_title">
+                <h1>Subscribe to our <br/> newsletter</h1>
+            </div>
+
+            <!-- Newsletter Form -->
+             <form class="newsletter_form" id="newsLetterForm" novalidate >
+                <div class="form-row">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="newsletterName" 
+                            name="name" 
+                            placeholder="Full Name"
+                            >
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            name="email"
+                            placeholder="Email"
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" id="Subscribe">Subscribe</button>
+
+            </form>
+        </div>
+     </section>
+
+     <!-- Footer section -->
+      <footer class="footer">
+       <div class="container">
+
+        <!-- column 1 -->
+            <div class="footer-column about">
+                    <h1>LOGO</h1>
+
+                    <h2>About Us</h2>
+
+                    <p>Lorem ipsum, dolor sit amet <br/>consectetur adipisicing elit.
+                     Laborum, repellendus!</p>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-column links">
+                <h2>Important Links</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <!-- <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">FAQs</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-column contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li><a href="mailto:mail@site.com">
+                        <span class="material-symbols-outlined">mail</span>
+                         mail@site.com</a></li>
+                    <li><a href="tel:+911234567890">
+                        <span class="material-symbols-outlined">call</span>
+                        +91 1234567890</a></li>
+                    <li>
+                        <span class="material-symbols-outlined">location_on</span>
+                        India</li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-column social">
+                <h2>Follow Us</h2>
+                <div class="social_icons">
+                    <div class="social_icon">
+                        <img src="assets/images/instagram.png" alt="instagram">
+                    </div>
+                    <div class="social_icon">
+                        <img src="assets/images/facebook.png" alt="facebook">
+                    </div>
+                    <div class="social_icon">
+                        <img src="assets/images/twitter.png" alt="twitter">
+                    </div>
+                    <div class="social_icon">
+                        <img src="assets/images/youtube.png" alt="youtube">
+                    </div>
+                </div>
+            </div>
+       </div>
+      </footer>
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/email.js"></script>
+</body>
+</html>
