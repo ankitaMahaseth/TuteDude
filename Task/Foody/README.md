@@ -250,3 +250,27 @@ css/queries.css
 The HTML also includes the viewport configuration required for responsive layouts.
 
 ---
+
+## 👩‍💻 Author
+
+**Ankita Mahaseth**
+
+Frontend / Full-Stack MERN Developer
+
+Skills:
+
+- HTML
+- CSS
+- JavaScript
+- React.js
+- Node.js
+- Express.js
+- MongoDB
+- Tailwind CSS
+
+## 📄 License
+
+This project is created for **learning and portfolio purposes**.
+
+You are free to modify and customize the project for your own learning and development.
+
