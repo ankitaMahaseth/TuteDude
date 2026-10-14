@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Greenwood Library Landing Page</title>
+</head>
+
+<body class="bg-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class=" sticky top-0 z-50 bg-white px-4 shadow-xs">
+
+        <nav class="mx-auto flex h-16 max-w-full items-center justify-between px-4 sm:px-8">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-bold">Greenwood</span>
+                     <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">open sat</span>
+                </div>
+           
+                <!-- Menu -->
+  
+                <div class="hidden items-center gap-5 text-base md:flex ">
+                    <a href="#ourSections" class="hover:border-b-2 transition-colors duration-300 ">Sections</a>
+                    <a href="#ourSpaces" class="hover:border-b-2">Gallery</a>
+                    <a href="#membership" class="hover:border-b-2">Membership</a>
+                    <a href="#events" class="hover:border-b-2">Events</a> 
+                </div>
+
+                <!-- VISIT US BUTTON -->
+                <div>
+                    <a href="#" class="w-full rounded-full border px-5
+                                    py-3 text-sm transition duration-300
+                                    hover:bg-black hover:text-white">
+                       
+                            Visit Us
+                        </a>
+                
+                </div>
+
+            <!-- Mobile menu button -->
+            <!-- <button aria-label="Open Navigation Menu" class="text-lg md:hidden">
+                ☰
+            </button> -->
+        </nav>
+    </header>
+
+ <!-- MAIN CONTENT -->
+<main class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- 1. Hero Section -->
+    <section class="mx-auto grid min-h-[500px] max-w-7xl
+                    grid-cols-1 items-center gap-8 py-10
+                    md:grid-cols-2 md:gap-12">
+
+        <!-- Hero Content -->
+        <div class="flex flex-col items-start justify-center">
+
+            <h1 class="text-3xl leading-tight
+                       text-slate-900 sm:text-5xl lg:text-5xl">
+                Your Neighbourhood
+                <br class="hidden sm:block" />
+                Library
+            </h1>
+
+            <p class="mt-5 max-w-lg text-base leading-7
+                      text-slate-600 sm:text-lg">
+                Thousands of books, quiet reading rooms, community
+                events, and free Wi-Fi — serving Greenwood since 1983.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+
+                <a href="#ourSpaces"
+                   class="rounded-full bg-slate-900 px-6 py-3
+                          text-sm font-medium text-white
+                          transition hover:bg-slate-700
+                          focus:outline-none focus:ring-2
+                          focus:ring-slate-500 focus:ring-offset-2">
+                    Explore Collection</a>
+                
+
+                <a href="#membership"
+                   class="rounded-full border border-slate-300
+                          px-8 py-3 text-sm font-medium text-slate-900
+                          transition hover:bg-slate-100
+                          focus:outline-none focus:ring-2
+                          focus:ring-slate-500 focus:ring-offset-2">
+                    Join Free</a>
+                
+
+            </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="flex items-center justify-center">
+            <img
+                src="library.jpg"
+                alt="Bookshelves and reading spaces inside the neighbourhood library"
+                class="h-64 w-full rounded-2xl object-cover shadow-lg brightness-70
+                       sm:h-80 md:h-96 transform transition-transform duration-300 hover:scale-[1.02]"
+            />
+        </div>
+    </section>
+
+    <!-- 2. COMPANY COUNTER DATA -->
+    <section class="border-t-2 border-t-gray-100" id="counter">
+        <div class="grid grid-cols-2 gap-4 py-5 sm:grid-cols-4">
+            
+            <div class="p-6">
+                <h1 class="text-2xl font-bold">12000+</h1>
+                <p>Books &  Journals</p>
+            </div>
+            <div class="p-6">
+                <h1 class="text-2xl font-bold">40+</h1>
+                <p>Years of Service</p>
+            </div>
+            <div class="p-6">
+                <h1 class="text-2xl font-bold text-green-700">Free</h1>
+                <p>Wi-Fi & Basic Access</p>
+            </div>
+            <div class="p-6">
+                <h1 class="text-2xl font-bold">6</h1>
+                <p>Dedicated Sections</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. OUR SECTIONS -->
+     <section class="ourSections" id="ourSections">
+
+        <!-- SECTION HEADING -->
+        <div class="py-6 border-b-2 border-b-gray-100">
+            <h4 class="text-gray-400 uppercase ">our sections</h4>
+        </div>
+
+        <!-- SECTION PARTS -->
+        <div class="my-5">
+            <div class="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2">
+                <div class="p-6 bg-gray-50 hover:bg-gray-100">
+                    <h1 class="text-2xl font-bold capitalize">fictions & literature</h1>
+                    <p class="text-gray-400 py-2">Novels, short stories and poetry - from timeless classics to new voices.</p>
+                    <div class="link text-gray-400 underline capitalize">
+                        <a href="#">browse fiction</a>
+                    </div>
+                </div>
+                <div class="p-6 bg-yellow-50 hover:bg-yellow-100">
+                    <h1 class="text-2xl font-bold capitalize">children's corner</h1>
+                    <p class="text-gray-400 py-2">Picture books, early readers and a cozy space for young learners.</p>
+                    <div class="link text-gray-400 underline capitalize">
+                        <a href="#">browse children's</a>
+                    </div>
+                </div>
+                <div class="p-6 bg-blue-50 hover:bg-blue-100">
+                    <h1 class="text-2xl font-bold capitalize">science & technology</h1>
+                    <p class="text-gray-400 py-2">Research journals, textbooks and STEM reference materials.</p>
+                    <div class="link text-gray-400 underline capitalize">
+                        <a href="#">browse science</a>
+                    </div>
+                </div>
+                <div class="p-6 bg-red-50 hover:bg-red-100">
+                    <h1 class="text-2xl font-bold capitalize">history & culture</h1>
+                    <p class="text-gray-400 py-2">local archives world civilisations, art history and cultural studies.</p>
+                    <div class="link text-gray-400 underline capitalize">
+                        <a href="#">browse history</a>
+                    </div>
+                </div>
+                <div class="p-6 bg-pink-50 hover:bg-pink-100">
+                    <h1 class="text-2xl font-bold">periodlicals & newspapers</h1>
+                    <p class="text-gray-400 py-2">Daily papers, weekly magazines and curated subscriptions.</p>
+                    <div class="link text-gray-400 underline">
+                        <a href="#">Browse periodlicals</a>
+                    </div>
+                </div>
+                <div class="p-6 bg-cyan-50 hover:bg-cyan-100">
+                    <h1 class="text-2xl font-bold capitalize">digital media lab</h1>
+                    <p class="text-gray-400 py-2">Public computers, e-book access and digital literacy resources.</p>
+                    <div class="link text-gray-400 underline capitalize">
+                        <a href="#">Browse digital</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+      <!-- 4. OUR SPACES  -->
+     <section class="ourSpaces" id="ourSpaces">
+        <div class="py-6 border-b-2 border-b-gray-100">
+            <h4 class="text-gray-400 uppercase ">our spaces</h4>
+        </div>
+        <div class="my-5">
+            <div class="flex max-w-full items-center justify-between ">
+                <h1 class="font-bold text-2xl">Inside the Library</h1>
+                <a hre="#" class="rounded-full border px-5
+                                    py-3 text-sm transition duration-300
+                                    hover:bg-black hover:text-white">
+                    
+                        View All
+                   
+                </a>
+            </div>
+            
+            <!-- GALLERY IMAGES -->
+            <div class="grid grid-cols-1 gap-6 p-5 sm:grid-cols-2">
+                <div class="rounded-lg shadow-sm overflow-hidden">
+                    <!-- image 1 -->
+                     <img src="library.jpg" alt="" 
+                     class=" h-48 w-full object-cover brightness-70 transform transition-transform duration-300  hover:scale-[1.02]"
+                     />
+                    
+                    <!-- Figcaption -->
+                    <figcaption class="p-3 flex max-w-full items-center justify-between">
+                        <h2 class="text-lg capitalize">reading hall</h2>
+                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                            main floor
+                        </button>
+                    </figcaption>
+                </div>
+
+                <div class="rounded-lg shadow-sm overflow-hidden">
+                    <!-- image 2-->
+                     <img src="library3.jpg" alt="" 
+                     class=" h-48 w-full object-cover brightness-70 transform transition-transform duration-300  hover:scale-[1.02]"
+                     />
+                    
+                    <!-- Figcaption -->
+                    <figcaption class="p-3 flex max-w-full items-center justify-between">
+                        <h2 class="text-lg capitalize">fiction collection</h2>
+                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                            2nd floor
+                        </button>
+                    </figcaption>
+                </div>
+
+                <div class="rounded-lg shadow-sm overflow-hidden">
+                    <!-- image 3 -->
+                     <img src="library2.png" alt="" 
+                     class=" h-48 w-full object-cover brightness-70 transform transition-transform duration-300  hover:scale-[1.02]"
+                     />
+                    
+                    <!-- Figcaption -->
+                    <figcaption class="p-3 flex max-w-full items-center justify-between">
+                        <h2 class="text-lg capitalize">Archive Wing</h2>
+                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                            basement
+                        </button>
+                    </figcaption>
+                </div>
+
+                <div class="rounded-lg shadow-sm overflow-hidden">
+                    <!-- image 4-->
+                     <img src="digital_media_lab.jpg" alt="" 
+                     class=" h-48 w-full object-cover brightness-70 transform transition-transform duration-300  hover:scale-[1.02]"
+                     />
+                    
+                    <!-- Figcaption -->
+                    <figcaption class="p-3 flex max-w-full items-center justify-between">
+                        <h2 class="text-lg capitalize">Digital Media Lab</h2>
+                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                            ground floor
+                        </button>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- 5. WHY GREENWOOD -->
+     <section class="whyMe" id="whyMe">
+        <div class="py-6 border-b-2 border-b-gray-100">
+            <h4 class="text-gray-400 uppercase ">why greenwood</h4>
+        </div>
+        <div class="my-5">
+            <div class="grid grid-cols-2 gap-4 p-5 sm:grid-cols-3">
+                <div class="p-6 bg-gray-50 hover:bg-gray-100">
+                    <h1 class="text-sm uppercase text-gray-600">about</h1>
+                    <p class="my-10 uppercase [word-spacing:2px]">a place for<br/> everyone.</p>
+                </div>
+                <div class="p-6 bg-yellow-50 hover:bg-yellow-100">
+                    <h1 class="text-sm text-gray-600 uppercase">community</h1>
+                    <p class="my-10 uppercase [word-spacing:2px]">open doors, <br/> open minds.</p>
+                    
+                </div>
+                <div class="p-6 bg-blue-50 hover:bg-blue-100">
+                    <h1 class="text-sm text-gray-600 uppercase">40+ Years</h1>
+                    <p class="my-10 uppercase [word-spacing:2px]">trusted by <br/> generations.</p>
+                </div>
+                <div class="p-6 bg-pink-50 hover:bg-pink-100">
+                    <h1 class="text-sm uppercase text-gray-600">events</h1>
+                    <p class="my-10 uppercase [word-spacing:2px]">learn beyond <br/> books.</p>
+                </div>
+                <div class="p-6 bg-purple-50 hover:bg-purple-100">
+                    <h1 class="text-sm text-gray-600 uppercase">digital</h1>
+                    <p class="my-10 uppercase [word-spacing:2px]">e-books, wi-fi<br/> and computers.</p>
+                    
+                </div>
+                <div class="p-6 bg-red-50 hover:bg-red-100">
+                    <h1 class="text-sm text-gray-600 uppercase">access</h1>
+                    <p class="my-10 uppercase [word-spacing:2px]">no barriers,  <br/> no knowledge.</p>
+                </div>
+            </div>
+        </div>
+     </section> 
+
+     <!-- 6. ABOUT ME -->
+      <section class="aboutMe" id="aboutMe">
+        <div class="about_heading">
+            <h1 class="text-center text-3xl">More than a building full of books - a home for <br/> curious minds.</h1>
+            <div class="flex justify-center">
+                 <div class="grid grid-cols-1 gap-2 p-5 w-1/2 sm:grid-cols-2">
+                    <div class="p-6">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Ex eligendi accusamus optio et tenetur velit soluta alias consequuntur harum ullam.</p>
+                    </div>
+                    <div class="p-6">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          accusamus optio et tenetur velit soluta alias consequuntur harum ullam.</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <!-- 7. MEMBERSHIP -->
+     <section class="mx-auto membership" id="membership">
+        <div class="py-6 border-b-2 border-b-gray-100">
+            <h4 class="text-gray-400 uppercase ">membership</h4>
+        </div>
+        <div class="my-5">
+            <div class="flex max-w-full items-center justify-between ">
+                <h1 class="font-bold text-2xl capitalize">join the Library</h1>
+                <div>
+                    <a href="#"
+                    class="px-5 py-3 text-sm font-medium rounded-full border capitalize transition duration-300 hover:bg-black hover:text-white">
+                        sign up
+                    </a>
+                </div> 
+            </div>
+
+            <!-- Membership Grid -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 py-5">
+
+                <!-- Introduction Panel -->
+                 
+                <div class="p-6 bg-green-50 hover:bg-green-100">
+                    <p class="text-sm uppercase text-gray-600 ">choose a plan</p>
+                    <p class="my-6 text-[22px] [word-spacing:2px] font-semibold">Everyone is <br/> welcome here.</p>
+                    <p class="text-gray-400 mb-12">Membership unlocks borrowing study rooms and priority events.</p>
+
+                    <a href="#" class="text-center mt-8 w-full rounded-full capitalize bg-black text-white
+                                    py-3 text-sm transition duration-300 px-8
+                                    hover:bg-transparent hover:text-black hover:border hover:border-gray-300">
+                    learn more
+                    </a>
+                </div>
+
+                <!-- BASIC PLAN -->
+                <div class="">
+                    <div class="rounded-lg shadow-sm overflow-hidden h-120">
+
+                        <!-- image -->
+                        <img src="basic_membership.jpg" alt="" 
+                        class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                        />
+                    
+                        <div class="flex flex-1 flex-col p-7">
+                            <h3 class="text-xl font-semibold">Basic</h3>
+                            <p class="mt-2 text-2xl text-gray-500">Free</p>
+                            <p class="mt-3 text-sm leading-6 text-gray-400">
+                                3 books ·  Reading Rooms ·  Free Wi-Fi
+                            </p>
+
+                            <a href="#"
+                                class=" text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
+                                    py-3 text-sm transition duration-300
+                                    hover:bg-black hover:text-white"
+                            >
+                              join free
+                            </a>
+                        </div>
+                   
+                    </div>            
+                </div>
+
+                 <!-- STUDENT PLAN -->
+                <div class="">
+                    <div class="rounded-lg shadow-sm overflow-hidden h-120">
+
+                        <!-- image -->
+                        <img src="student.jpg" alt="" 
+                        class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                        />
+                    
+                        <div class="flex flex-1 flex-col p-7">
+                            <h3 class="text-xl font-semibold capitalize">student</h3>
+                            <p class="mt-2 text-2xl text-gray-500">₹ 200/ <span class="text-sm"> yr</span></p>
+                            <p class="mt-3 text-sm leading-6 text-gray-400">
+                                8 books · Digital Catalouge · Study Rooms
+                            </p>
+
+                            <a
+                                class=" text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
+                                    py-3 text-sm transition duration-300
+                                    hover:bg-black hover:text-white "
+                            >
+                                join now
+                            </a>
+                        </div>
+                   
+                    </div>            
+                </div>
+
+                 <!-- FAMILY PLAN -->
+                <div class="">
+                    <div class="rounded-lg shadow-sm overflow-hidden h-120">
+
+                        <!-- image -->
+                        <img src="library.jpg" alt="" 
+                        class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                        />
+                    
+                        <div class="flex flex-1 flex-col p-7">
+                            <h3 class="text-xl font-semibold">family</h3>
+                            <p class="mt-2 text-2xl text-gray-500">₹ 500/<span class="text-sm"> yr</span></p>
+                            <p class="mt-3 text-sm leading-6 text-gray-400">
+                                15 books · All Benefits · Priority Events
+                            </p>
+
+                            <a href="#"
+                                class=" text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
+                                    py-3 text-sm transition duration-300
+                                    hover:bg-black hover:text-white"
+                            >
+                                join now
+                            </a>
+                        </div>
+                   
+                    </div>            
+                </div>
+            </div>
+        </div>
+     </section> 
+
+     <!-- 8. Testimonial  -->
+     <section class="testimonial mx-auto max-w-4xl px-6 py-10" id="testimonial">
+        <div class="py-6 border-t-2 border-t-gray-100">   
+            <div class="flex items-start gap-6 sm:gap-16">
+                 <!-- Profile Image -->
+                <div class="shrink-0">
+                    <img src="avatar.jpg" alt="" class="h-20  border rounded-full p-3">
+                </div>
+
+                <!-- Testimonial Content -->
+                <div class="min-w-0 flex-1">
+                    <blockquote class="text-base leading-8 text-gray-500 sm:text-xl sm:leading-10">
+                        "Greenwood has been my second home for fifteen years —
+                        it's where I learned to love reading."
+                    </blockquote>
+                    <p class="mt-3 text-sm text-gray-400 sm:text-lg">
+                        — Meera Desai, volunteer at the children's section
+    `               </p>
+                </div> 
+            </div>
+    </section>
+
+    <!--9. CONTACT -->
+     <section class="contact bg-green-100  p-10 rounded" id="contact">
+        <div class="contact_hedaing uppercase text-gray-600 tracking-wide py-5">
+            contact
+        </div>
+        <div class="contact_msg">
+            <h1 class="text-[40px] text-gray-500">Visit us at 42 Elm Street, Greenwood.</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-2  p-3 w-2/3 sm:grid-cols-3">
+            <div class="text-gray-500">
+                <p>Mon - Fri: 8am - 7pm</p>
+            </div>
+            <div class="text-gray-500">
+                <p>Sat: 9am - 5pm</p>
+            </div>
+            <div class="text-gray-500">
+                <p>Sun: Closed</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-2  p-3 w-2/3 sm:grid-cols-3">
+            <div class="getDirection">
+                 <a href="#" class="bg-black text-gray-200 rounded-full capitalize
+                                    py-2 px-5 text-sm transition duration-300
+                                    hover:border border-gray-400 hover:bg-transparent hover:text-black">
+                     Get Directions
+                    </a>
+            </div>
+            <div class="text-gray-500">
+                <p>Web: greenwood.org</p>
+            </div>
+            <div class="text-gray-500">
+                <p>+91 1234567890</p>
+            </div>
+        </div>
+     </section>
+
+     <!-- 10. EVENTS -->
+      <section class="mx-auto events my-5" id="events">
+        <div class="py-6 border-b-2 border-b-gray-100">
+            <h4 class="text-gray-400 uppercase ">events</h4>
+        </div>
+        <div class="my-5">
+            <div class="flex max-w-full items-center justify-between ">
+                <h1 class="font-bold text-2xl capitalize">what's coming up</h1>
+                <div>
+                    <a href="#"
+                    class="px-4 py-2 text-sm font-medium rounded-full border capitalize transition duration-300 hover:bg-black hover:text-white">
+                        all events
+                    </a>
+                </div> 
+            </div>
+
+            <!-- Event Grid -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 py-5">
+
+                <!-- event 1 -->
+                <div class="rounded-lg overflow-hidden h-80">
+
+                    <!-- image -->
+                    <img src="basic_membership.jpg" alt="" 
+                    class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                    />
+                
+                    <div class="flex flex-1 flex-col p-7">
+                        <h3 class="text-sm font-medium">Summer Reading Challenge - open to children aged 6-14</h3>
+                        <p class="mt-2 text-xs text-gray-500">5 Aug 2026</p>
+                    </div>
+                
+                </div>            
+               
+                 <!-- event 2 -->
+                <div class="rounded-lg overflow-hidden h-80">
+
+                    <!-- image -->
+                    <img src="student.jpg" alt="" 
+                    class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                    />
+                
+                    <div class="flex flex-1 flex-col p-7">
+                        <h3 class="text-sm font-medium">Book Club - Discussing <i>The God of Small Things</i></h3>
+                        <p class="mt-2 text-xs text-gray-500">10 Aug 2026</p>
+                    </div>
+                
+                </div>            
+
+                 <!-- event 3  -->
+                <div class="rounded-lg overflow-hidden h-80">
+
+                    <!-- image -->
+                    <img src="basic_membership.jpg" alt="" 
+                    class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                    />
+                
+                    <div class="flex flex-1 flex-col p-7">
+                        <h3 class="text-sm font-medium">Digital Literacy Workshop - free, no registration needed</h3>
+                        <p class="mt-2 text-xs text-gray-500">18 Aug 2026</p>
+                    </div>
+                
+                </div> 
+                
+                 <!-- event 4  -->
+                <div class="rounded-lg overflow-hidden h-80">
+
+                    <!-- image -->
+                    <img src="library.jpg" alt="" 
+                    class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                    />
+                
+                    <div class="flex flex-1 flex-col p-7">
+                        <h3 class="text-sm font-medium">Author Meet: Priya Sharma - Q&A and book signing</h3>
+                        <p class="mt-2 text-xs text-gray-500">20 Auh 2026</p>
+                    </div>
+                
+                </div> 
+                
+            </div>
+        </div>
+     </section>
+</main>
+
+<!-- FOOTER -->
+ <footer class="mt-5 bg-gray-50  pt-5">
+
+    <!-- Footer Grid -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 p-5">
+
+        <!-- Company Details -->
+        <div class="company_details">
+            <h1 class="text-2xl font-bold my-2">Greenwood</h1>
+            <div class="grid grid-cols-6 gap-4 py-2">
+                <i class="rounded-full p-2 bg-gray-200 flex text-sm">fb</i>
+                <i  class="rounded-full p-2 bg-gray-200 flex text-sm">lg</i>
+                <i  class="rounded-full p-2 bg-gray-200 flex text-sm">Tw</i>
+            </div>
+        </div>
+
+        <!-- Company Pages -->
+        <div class="company_pages text-gray-600">
+            <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">pages</h1>
+            <ul class="list-none">
+                <li class="my-2">Home</li>
+                <li class="my-2">Sections</li>
+                <li class="my-2">Membership</li>
+                <li class="my-2">Events</li>
+                <li class="my-2">Contact</li>
+            </ul>
+        </div>
+
+        <!-- Company Sections -->
+        <div class="company_sections text-gray-600">
+            <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">Sections</h1>
+            <ul class="list-none">
+                <li class="my-2">fiction</li>
+                <li class="my-2">Children's</li>
+                <li class="my-2">Science</li>
+                <li class="my-2">History</li>
+                <li class="my-2">periodlicals</li>
+                <li class="my-2">Digital Lab</li>
+            </ul>
+        </div>
+
+        <!-- Company Contact Details -->
+        <div class="company_contact text-gray-600">
+            <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">Sections</h1>
+            <ul class="list-none">
+                <li class="my-2">Bengaluru, India</li>
+                <li class="my-2">+91 1234567890-</li>
+                <li class="my-2">hello@example.com</li>
+                <li class="my-2">Mon-Fri 8am - 7pm</li>
+                <li class="my-2">Sat: 9am-5pm</li>
+            </ul>
+        </div>
+    </div>
+ </footer>
+</body>
+</html>
