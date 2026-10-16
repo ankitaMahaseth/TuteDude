@@ -14,54 +14,42 @@
 <body class="bg-white">
 
     <!-- ================= NAVBAR ================= -->
-    <header class=" sticky top-0 z-50 bg-white px-4 shadow-xs">
+    <header class="sticky top-0 z-50 bg-white px-4 backdrop-blur-md">
 
         <nav class="mx-auto flex h-16 max-w-full items-center justify-between px-4 sm:px-8">
 
-                <!-- Logo -->
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl font-bold">Greenwood</span>
-                     <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">open sat</span>
-                </div>
-           
-                <!-- Menu -->
-  
-                <div class="hidden items-center gap-5 text-base md:flex ">
-                    <a href="#ourSections" class="hover:border-b-2 transition-colors duration-300 ">Sections</a>
-                    <a href="#ourSpaces" class="hover:border-b-2">Gallery</a>
-                    <a href="#membership" class="hover:border-b-2">Membership</a>
-                    <a href="#events" class="hover:border-b-2">Events</a> 
-                </div>
+            <!-- Logo -->
+            <div class="flex items-center gap-1 justify-center">
+                <span class="text-xl font-bold md:text-md">Greenwood</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2 py-2 rounded-full">open sat</span>
+            </div>
+        
+            <!-- Menu -->
 
-                <!-- VISIT US BUTTON -->
-                <div>
-                    <a href="#" class="w-full rounded-full border px-5
-                                    py-3 text-sm transition duration-300
-                                    hover:bg-black hover:text-white">
-                       
-                            Visit Us
-                        </a>
-                
-                </div>
+            <div class="hidden items-center gap-5 text-base md:flex ">
+                <a href="#ourSections" class="hover:border-b-2 transition duration-700 ease-in-out after:w-0 hover:after:w-full">Sections</a>
+                <a href="#ourSpaces" class="hover:border-b-2 transition duration-700 ease-in-out after:w-0 hover:after:w-full">Gallery</a>
+                <a href="#membership" class="hover:border-b-2 transition duration-700 ease-in-out after:w-0 hover:after:w-full">Membership</a>
+                <a href="#events" class="hover:border-b-2 transition duration-700 ease-in-out after:w-0 hover:after:w-full">Events</a> 
+            </div>
 
-            <!-- Mobile menu button -->
-            <!-- <button aria-label="Open Navigation Menu" class="text-lg md:hidden">
-                ☰
-            </button> -->
+            <!-- VISIT US BUTTON -->
+            <div>
+                <a href="#contact" class="rounded-full border px-3 py-2 text-sm transition duration-300 hover:bg-black hover:text-white">
+                    Visit Us
+                </a>
+            </div>
         </nav>
     </header>
 
- <!-- MAIN CONTENT -->
+ <!-- MAIN -->
 <main class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- 1. Hero Section -->
-    <section class="mx-auto grid min-h-[500px] max-w-7xl
-                    grid-cols-1 items-center gap-8 py-10
-                    md:grid-cols-2 md:gap-12">
+    <!-- 1. HERO SECTION -->
+    <section class="mx-auto grid min-h-[500px] max-w-7xl grid-cols-1 items-center gap-8 py-10 md:grid-cols-2 md:gap-12">
 
         <!-- Hero Content -->
         <div class="flex flex-col items-start justify-center">
-
             <h1 class="text-3xl leading-tight
                        text-slate-900 sm:text-5xl lg:text-5xl">
                 Your Neighbourhood
@@ -75,24 +63,23 @@
                 events, and free Wi-Fi — serving Greenwood since 1983.
             </p>
 
-            <!-- CTA Buttons -->
+            <!-- HERO Buttons -->
             <div class="mt-6 flex flex-wrap items-center gap-3">
 
                 <a href="#ourSpaces"
                    class="rounded-full bg-slate-900 px-6 py-3
-                          text-sm font-medium text-white
-                          transition hover:bg-slate-700
-                          focus:outline-none focus:ring-2
-                          focus:ring-slate-500 focus:ring-offset-2">
+          text-sm font-medium text-white
+          border border-transparent
+          transition hover:bg-transparent hover:text-black
+          hover:border-black">
                     Explore Collection</a>
                 
 
                 <a href="#membership"
                    class="rounded-full border border-slate-300
                           px-8 py-3 text-sm font-medium text-slate-900
-                          transition hover:bg-slate-100
-                          focus:outline-none focus:ring-2
-                          focus:ring-slate-500 focus:ring-offset-2">
+                          transition hover:border-black hover:text-black
+                          ">
                     Join Free</a>
                 
 
@@ -105,105 +92,86 @@
                 src="library.jpg"
                 alt="Bookshelves and reading spaces inside the neighbourhood library"
                 class="h-64 w-full rounded-2xl object-cover shadow-lg brightness-70
-                       sm:h-80 md:h-96 transform transition-transform duration-300 hover:scale-[1.02]"
+                       sm:h-80 md:h-96 transform transition-transform duration-300 hover:scale-[1.05]"
             />
         </div>
     </section>
 
     <!-- 2. COMPANY COUNTER DATA -->
     <section class="border-t-2 border-t-gray-100" id="counter">
-        <div class="grid grid-cols-2 gap-4 py-5 sm:grid-cols-4">
+        <div class="grid grid-cols-1 gap-4 py-5 sm:grid-cols-4">
             
             <div class="p-6">
-                <h1 class="text-2xl font-bold">12000+</h1>
-                <p>Books &  Journals</p>
+                <p class="text-2xl font-bold">12000+</p>
+                <p class="text-slate-400">Books &  Journals</p>
             </div>
             <div class="p-6">
-                <h1 class="text-2xl font-bold">40+</h1>
-                <p>Years of Service</p>
+                <p class="text-2xl font-bold">40+</p>
+                <p class="text-slate-400">Years of Service</p>
             </div>
             <div class="p-6">
-                <h1 class="text-2xl font-bold text-green-700">Free</h1>
-                <p>Wi-Fi & Basic Access</p>
+                <p class="text-2xl font-bold text-green-700">Free</p>
+                <p class="text-slate-400">Wi-Fi & Basic Access</p>
             </div>
             <div class="p-6">
-                <h1 class="text-2xl font-bold">6</h1>
-                <p>Dedicated Sections</p>
+                <p class="text-2xl font-bold">6</p>
+                <p class="text-slate-400">Dedicated Sections</p>
             </div>
         </div>
     </section>
 
     <!-- 3. OUR SECTIONS -->
-     <section class="ourSections" id="ourSections">
+     <section id="ourSections">
 
         <!-- SECTION HEADING -->
-        <div class="py-6 border-b-2 border-b-gray-100">
+        <div class="py-6 border-b-2 border-b-gray-100 mb-3">
             <h4 class="text-gray-400 uppercase ">our sections</h4>
         </div>
 
         <!-- SECTION PARTS -->
-        <div class="my-5">
             <div class="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2">
-                <div class="p-6 bg-gray-50 hover:bg-gray-100">
-                    <h1 class="text-2xl font-bold capitalize">fictions & literature</h1>
+                <div class=" group p-6 bg-emerald-50 hover:bg-emerald-100">
+                    <h1 class="text-2xl font-semibold capitalize group-hover:text-emerald-600">fictions & literature</h1>
                     <p class="text-gray-400 py-2">Novels, short stories and poetry - from timeless classics to new voices.</p>
-                    <div class="link text-gray-400 underline capitalize">
-                        <a href="#">browse fiction</a>
-                    </div>
+                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-emerald-600">browse fiction</a>
                 </div>
-                <div class="p-6 bg-yellow-50 hover:bg-yellow-100">
-                    <h1 class="text-2xl font-bold capitalize">children's corner</h1>
+                <div class="group p-6 bg-amber-50 hover:bg-amber-100">
+                    <h1 class="text-2xl font-semibold capitalize group-hover:text-amber-600">children's corner</h1>
                     <p class="text-gray-400 py-2">Picture books, early readers and a cozy space for young learners.</p>
-                    <div class="link text-gray-400 underline capitalize">
-                        <a href="#">browse children's</a>
-                    </div>
+                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-amber-600">browse children's</a>
                 </div>
-                <div class="p-6 bg-blue-50 hover:bg-blue-100">
-                    <h1 class="text-2xl font-bold capitalize">science & technology</h1>
+                <div class="group p-6 bg-blue-50 hover:bg-blue-100">
+                    <h1 class="text-2xl font-semibold capitalize group-hover:text-blue-600">science & technology</h1>
                     <p class="text-gray-400 py-2">Research journals, textbooks and STEM reference materials.</p>
-                    <div class="link text-gray-400 underline capitalize">
-                        <a href="#">browse science</a>
-                    </div>
+                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-blue-600">browse science</a>
                 </div>
-                <div class="p-6 bg-red-50 hover:bg-red-100">
-                    <h1 class="text-2xl font-bold capitalize">history & culture</h1>
+                <div class="group p-6 bg-red-50 hover:bg-red-100">
+                    <h1 class="text-2xl font-semibold capitalize group-hover:text-red-600">history & culture</h1>
                     <p class="text-gray-400 py-2">local archives world civilisations, art history and cultural studies.</p>
-                    <div class="link text-gray-400 underline capitalize">
-                        <a href="#">browse history</a>
-                    </div>
+                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-red-600">browse history</a>
                 </div>
-                <div class="p-6 bg-pink-50 hover:bg-pink-100">
-                    <h1 class="text-2xl font-bold">periodlicals & newspapers</h1>
+                <div class="group p-6 bg-pink-50 hover:bg-pink-100">
+                    <h1 class="text-2xl font-semibold group-hover:text-pink-600">periodlicals & newspapers</h1>
                     <p class="text-gray-400 py-2">Daily papers, weekly magazines and curated subscriptions.</p>
-                    <div class="link text-gray-400 underline">
-                        <a href="#">Browse periodlicals</a>
-                    </div>
+                    <a href="#" class="link text-gray-400 underline group-hover:text-pink-600">Browse periodlicals</a>
                 </div>
-                <div class="p-6 bg-cyan-50 hover:bg-cyan-100">
-                    <h1 class="text-2xl font-bold capitalize">digital media lab</h1>
+                <div class="group p-6 bg-cyan-50 hover:bg-cyan-100">
+                    <h1 class="text-2xl font-semibold capitalize group-hover:text-cyan-600">digital media lab</h1>
                     <p class="text-gray-400 py-2">Public computers, e-book access and digital literacy resources.</p>
-                    <div class="link text-gray-400 underline capitalize">
-                        <a href="#">Browse digital</a>
-                    </div>
+                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-cyan-600">Browse digital</a>
                 </div>
             </div>
-        </div>
      </section>
 
       <!-- 4. OUR SPACES  -->
-     <section class="ourSpaces" id="ourSpaces">
+     <section id="ourSpaces">
         <div class="py-6 border-b-2 border-b-gray-100">
             <h4 class="text-gray-400 uppercase ">our spaces</h4>
         </div>
-        <div class="my-5">
-            <div class="flex max-w-full items-center justify-between ">
+            <div class="flex max-w-full items-center justify-between my-5">
                 <h1 class="font-bold text-2xl">Inside the Library</h1>
-                <a hre="#" class="rounded-full border px-5
-                                    py-3 text-sm transition duration-300
-                                    hover:bg-black hover:text-white">
-                    
-                        View All
-                   
+                <a href="#" class=" cursor-pointer rounded-full border px-4 py-2 text-sm transition duration-300 hover:bg-black hover:text-white">
+                    View All
                 </a>
             </div>
             
@@ -218,7 +186,7 @@
                     <!-- Figcaption -->
                     <figcaption class="p-3 flex max-w-full items-center justify-between">
                         <h2 class="text-lg capitalize">reading hall</h2>
-                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                        <button class="px-3 py-1 text-xs font-normal rounded-full border capitalize">
                             main floor
                         </button>
                     </figcaption>
@@ -233,7 +201,7 @@
                     <!-- Figcaption -->
                     <figcaption class="p-3 flex max-w-full items-center justify-between">
                         <h2 class="text-lg capitalize">fiction collection</h2>
-                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                        <button class="px-3 py-1 text-xs font-normal rounded-full border capitalize">
                             2nd floor
                         </button>
                     </figcaption>
@@ -248,7 +216,7 @@
                     <!-- Figcaption -->
                     <figcaption class="p-3 flex max-w-full items-center justify-between">
                         <h2 class="text-lg capitalize">Archive Wing</h2>
-                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                        <button class="px-3 py-1 text-xs font-normal rounded-full border capitalize">
                             basement
                         </button>
                     </figcaption>
@@ -263,48 +231,45 @@
                     <!-- Figcaption -->
                     <figcaption class="p-3 flex max-w-full items-center justify-between">
                         <h2 class="text-lg capitalize">Digital Media Lab</h2>
-                        <button class="px-4 py-2 text-sm font-normal rounded-full border capitalize">
+                        <button class="px-3 py-1 text-xs font-normal rounded-full border capitalize">
                             ground floor
                         </button>
                     </figcaption>
                 </div>
             </div>
-        </div>
      </section>
 
      <!-- 5. WHY GREENWOOD -->
-     <section class="whyMe" id="whyMe">
+     <section id="whyMe">
         <div class="py-6 border-b-2 border-b-gray-100">
             <h4 class="text-gray-400 uppercase ">why greenwood</h4>
         </div>
-        <div class="my-5">
-            <div class="grid grid-cols-2 gap-4 p-5 sm:grid-cols-3">
-                <div class="p-6 bg-gray-50 hover:bg-gray-100">
-                    <h1 class="text-sm uppercase text-gray-600">about</h1>
-                    <p class="my-10 uppercase [word-spacing:2px]">a place for<br/> everyone.</p>
-                </div>
-                <div class="p-6 bg-yellow-50 hover:bg-yellow-100">
-                    <h1 class="text-sm text-gray-600 uppercase">community</h1>
-                    <p class="my-10 uppercase [word-spacing:2px]">open doors, <br/> open minds.</p>
-                    
-                </div>
-                <div class="p-6 bg-blue-50 hover:bg-blue-100">
-                    <h1 class="text-sm text-gray-600 uppercase">40+ Years</h1>
-                    <p class="my-10 uppercase [word-spacing:2px]">trusted by <br/> generations.</p>
-                </div>
-                <div class="p-6 bg-pink-50 hover:bg-pink-100">
-                    <h1 class="text-sm uppercase text-gray-600">events</h1>
-                    <p class="my-10 uppercase [word-spacing:2px]">learn beyond <br/> books.</p>
-                </div>
-                <div class="p-6 bg-purple-50 hover:bg-purple-100">
-                    <h1 class="text-sm text-gray-600 uppercase">digital</h1>
-                    <p class="my-10 uppercase [word-spacing:2px]">e-books, wi-fi<br/> and computers.</p>
-                    
-                </div>
-                <div class="p-6 bg-red-50 hover:bg-red-100">
-                    <h1 class="text-sm text-gray-600 uppercase">access</h1>
-                    <p class="my-10 uppercase [word-spacing:2px]">no barriers,  <br/> no knowledge.</p>
-                </div>
+        <div class="grid grid-cols-1 gap-4 p-5 sm:grid-cols-3">
+            <div class="p-6 bg-gray-50 hover:bg-gray-100">
+                <h1 class="text-sm uppercase text-gray-600">about</h1>
+                <p class="my-10 uppercase [word-spacing:2px]">a place for<br/> everyone.</p>
+            </div>
+            <div class="p-6 bg-yellow-50 hover:bg-yellow-100">
+                <h1 class="text-sm text-gray-600 uppercase">community</h1>
+                <p class="my-10 uppercase [word-spacing:2px]">open doors, <br/> open minds.</p>
+                
+            </div>
+            <div class="p-6 bg-blue-50 hover:bg-blue-100">
+                <h1 class="text-sm text-gray-600 uppercase">40+ Years</h1>
+                <p class="my-10 uppercase [word-spacing:2px]">trusted by <br/> generations.</p>
+            </div>
+            <div class="p-6 bg-pink-50 hover:bg-pink-100">
+                <h1 class="text-sm uppercase text-gray-600">events</h1>
+                <p class="my-10 uppercase [word-spacing:2px]">learn beyond <br/> books.</p>
+            </div>
+            <div class="p-6 bg-purple-50 hover:bg-purple-100">
+                <h1 class="text-sm text-gray-600 uppercase">digital</h1>
+                <p class="my-10 uppercase [word-spacing:2px]">e-books, wi-fi<br/> and computers.</p>
+                
+            </div>
+            <div class="p-6 bg-red-50 hover:bg-red-100">
+                <h1 class="text-sm text-gray-600 uppercase">access</h1>
+                <p class="my-10 uppercase [word-spacing:2px]">no barriers,  <br/> no knowledge.</p>
             </div>
         </div>
      </section> 
@@ -312,9 +277,12 @@
      <!-- 6. ABOUT ME -->
       <section class="aboutMe" id="aboutMe">
         <div class="about_heading">
-            <h1 class="text-center text-3xl">More than a building full of books - a home for <br/> curious minds.</h1>
+            <h2 class="mx-auto max-w-3xl text-center
+                        text-2xl leading-tight sm:text-3xl lg:text-4xl">
+                More than a building full of books — a home for curious minds.
+            </h2>
             <div class="flex justify-center">
-                 <div class="grid grid-cols-1 gap-2 p-5 w-1/2 sm:grid-cols-2">
+                 <div class="grid grid-cols-1 gap-2 p-5 sm:w-1/2 sm:grid-cols-2">
                     <div class="p-6">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                                 Ex eligendi accusamus optio et tenetur velit soluta alias consequuntur harum ullam.</p>
@@ -329,7 +297,7 @@
     </section>
 
     <!-- 7. MEMBERSHIP -->
-     <section class="mx-auto membership" id="membership">
+     <section id="membership">
         <div class="py-6 border-b-2 border-b-gray-100">
             <h4 class="text-gray-400 uppercase ">membership</h4>
         </div>
@@ -338,7 +306,7 @@
                 <h1 class="font-bold text-2xl capitalize">join the Library</h1>
                 <div>
                     <a href="#"
-                    class="px-5 py-3 text-sm font-medium rounded-full border capitalize transition duration-300 hover:bg-black hover:text-white">
+                    class="px-4 py-2 text-sm font-medium rounded-full border capitalize transition duration-300 hover:bg-black hover:text-white">
                         sign up
                     </a>
                 </div> 
@@ -349,21 +317,18 @@
 
                 <!-- Introduction Panel -->
                  
-                <div class="p-6 bg-green-50 hover:bg-green-100">
+                <div class="p-6 bg-green-50 hover:bg-green-100 flex flex-col h-full">
                     <p class="text-sm uppercase text-gray-600 ">choose a plan</p>
                     <p class="my-6 text-[22px] [word-spacing:2px] font-semibold">Everyone is <br/> welcome here.</p>
                     <p class="text-gray-400 mb-12">Membership unlocks borrowing study rooms and priority events.</p>
 
-                    <a href="#" class="text-center mt-8 w-full rounded-full capitalize bg-black text-white
-                                    py-3 text-sm transition duration-300 px-8
-                                    hover:bg-transparent hover:text-black hover:border hover:border-gray-300">
-                    learn more
-                    </a>
+                    <button class="mt-auto text-center rounded-full capitalize bg-black text-white py-3 text-sm transition duration-300  hover:bg-transparent hover:text-black hover:border hover:border-black">
+                        learn more
+                    </button>
                 </div>
 
                 <!-- BASIC PLAN -->
-                <div class="">
-                    <div class="rounded-lg shadow-sm overflow-hidden h-120">
+                    <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
 
                         <!-- image -->
                         <img src="basic_membership.jpg" alt="" 
@@ -374,24 +339,21 @@
                             <h3 class="text-xl font-semibold">Basic</h3>
                             <p class="mt-2 text-2xl text-gray-500">Free</p>
                             <p class="mt-3 text-sm leading-6 text-gray-400">
-                                3 books ·  Reading Rooms ·  Free Wi-Fi
+                                3 books · Reading Rooms · Wi-Fi
                             </p>
 
-                            <a href="#"
-                                class=" text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
+                            <button class=" mt-auto text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
                                     py-3 text-sm transition duration-300
                                     hover:bg-black hover:text-white"
                             >
                               join free
-                            </a>
+                            </button>
                         </div>
                    
                     </div>            
-                </div>
 
                  <!-- STUDENT PLAN -->
-                <div class="">
-                    <div class="rounded-lg shadow-sm overflow-hidden h-120">
+                    <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
 
                         <!-- image -->
                         <img src="student.jpg" alt="" 
@@ -405,21 +367,19 @@
                                 8 books · Digital Catalouge · Study Rooms
                             </p>
 
-                            <a
-                                class=" text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
+                            <button
+                                class="mt-auto text-center w-full rounded-full border-2 border-gray-300 capitalize bg-black text-white
                                     py-3 text-sm transition duration-300
-                                    hover:bg-black hover:text-white "
+                                    hover:bg-transparent hover:text-black hover:border-black "
                             >
                                 join now
-                            </a>
+                            </button>
                         </div>
                    
                     </div>            
-                </div>
 
                  <!-- FAMILY PLAN -->
-                <div class="">
-                    <div class="rounded-lg shadow-sm overflow-hidden h-120">
+                    <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-120">
 
                         <!-- image -->
                         <img src="library.jpg" alt="" 
@@ -434,7 +394,7 @@
                             </p>
 
                             <a href="#"
-                                class=" text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
+                                class="mt-auto text-center w-full rounded-full border-2 border-gray-300 capitalize
                                     py-3 text-sm transition duration-300
                                     hover:bg-black hover:text-white"
                             >
@@ -443,7 +403,6 @@
                         </div>
                    
                     </div>            
-                </div>
             </div>
         </div>
      </section> 
@@ -453,8 +412,8 @@
         <div class="py-6 border-t-2 border-t-gray-100">   
             <div class="flex items-start gap-6 sm:gap-16">
                  <!-- Profile Image -->
-                <div class="shrink-0">
-                    <img src="avatar.jpg" alt="" class="h-20  border rounded-full p-3">
+                <div class="shrink-0 brightness-70 hover:brightness-95">
+                    <img src="avatar.jpg" alt="testimonial_profile" class="h-20 rounded-full ">
                 </div>
 
                 <!-- Testimonial Content -->
@@ -463,7 +422,7 @@
                         "Greenwood has been my second home for fifteen years —
                         it's where I learned to love reading."
                     </blockquote>
-                    <p class="mt-3 text-sm text-gray-400 sm:text-lg">
+                    <p class="mt-3 text-sm text-gray-600 sm:text-lg">
                         — Meera Desai, volunteer at the children's section
     `               </p>
                 </div> 
@@ -471,38 +430,33 @@
     </section>
 
     <!--9. CONTACT -->
-     <section class="contact bg-green-100  p-10 rounded" id="contact">
-        <div class="contact_hedaing uppercase text-gray-600 tracking-wide py-5">
+     <section class="bg-emerald-50  p-10 rounded" id="contact">
+        <div class="contact_hedaing uppercase text-gray-600 tracking-wide py-3">
             contact
         </div>
         <div class="contact_msg">
-            <h1 class="text-[40px] text-gray-500">Visit us at 42 Elm Street, Greenwood.</h1>
+            <h2 class="text-2xl leading-tight text-gray-800 sm:text-3xl lg:text-4xl">Visit us at 42 Elm Street, Greenwood.</h2>
+
         </div>
-        <div class="grid grid-cols-1 gap-2  p-3 w-2/3 sm:grid-cols-3">
-            <div class="text-gray-500">
-                <p>Mon - Fri: 8am - 7pm</p>
-            </div>
-            <div class="text-gray-500">
-                <p>Sat: 9am - 5pm</p>
-            </div>
-            <div class="text-gray-500">
-                <p>Sun: Closed</p>
-            </div>
+        <div class="mt-6 grid grid-cols-1 gap-3  p-3 w-2/3 sm:grid-cols-3">
+                <p class="text-gray-600">Mon - Fri: 8am - 7pm</p>
+                <p class="text-gray-600">Sat: 9am - 5pm</p>
+                <p class="text-gray-600">Sun: Closed</p>
         </div>
-        <div class="grid grid-cols-1 gap-2  p-3 w-2/3 sm:grid-cols-3">
-            <div class="getDirection">
-                 <a href="#" class="bg-black text-gray-200 rounded-full capitalize
-                                    py-2 px-5 text-sm transition duration-300
+        <div class="mt-6 flex flex-wrap items-center gap-5">
+                 <a href="https://google.com" class="bg-black text-gray-200 rounded-full capitalize
+                                    py-2 px-3 text-sm transition duration-300
                                     hover:border border-gray-400 hover:bg-transparent hover:text-black">
                      Get Directions
                     </a>
-            </div>
-            <div class="text-gray-500">
-                <p>Web: greenwood.org</p>
-            </div>
-            <div class="text-gray-500">
-                <p>+91 1234567890</p>
-            </div>
+            <a href="https://greenwood.org" class="text-gray-600">
+                 greenwood.org
+            </a>
+
+            <a href="tel:+911234567890"
+                class="text-gray-600">
+                +91 1234567890
+            </a>
         </div>
      </section>
 
@@ -526,7 +480,7 @@
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 py-5">
 
                 <!-- event 1 -->
-                <div class="rounded-lg overflow-hidden h-80">
+                <div class="rounded-lg overflow-hidden">
 
                     <!-- image -->
                     <img src="basic_membership.jpg" alt="" 
@@ -600,9 +554,9 @@
         <div class="company_details">
             <h1 class="text-2xl font-bold my-2">Greenwood</h1>
             <div class="grid grid-cols-6 gap-4 py-2">
-                <i class="rounded-full p-2 bg-gray-200 flex text-sm">fb</i>
-                <i  class="rounded-full p-2 bg-gray-200 flex text-sm">lg</i>
-                <i  class="rounded-full p-2 bg-gray-200 flex text-sm">Tw</i>
+                <a href="" class=" rounded-full p-2 bg-gray-200 flex text-sm hover:text-blue-600">Fb</a>
+                <a href="" class="rounded-full p-2 bg-gray-200 flex text-sm  hover:text-red-600">Ig</a>
+                <a href="" class="rounded-full p-2 bg-gray-200 flex text-sm  hover:text-cyan-600">Tw</a>
             </div>
         </div>
 
@@ -610,11 +564,11 @@
         <div class="company_pages text-gray-600">
             <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">pages</h1>
             <ul class="list-none">
-                <li class="my-2">Home</li>
-                <li class="my-2">Sections</li>
-                <li class="my-2">Membership</li>
-                <li class="my-2">Events</li>
-                <li class="my-2">Contact</li>
+                <li class="my-2"><a href="#" class="hover:border-b-2">Home</a></li>
+                <li class="my-2"><a href="#ourSections" class="hover:border-b-2">Sections</a></li>
+                <li class="my-2"><a href="#membership" class="hover:border-b-2">Membership</a></li>
+                <li class="my-2"><a href="#events" class="hover:border-b-2">Events</a></li>
+                <li class="my-2"><a href="#contact"  class="hover:border-b-2">Contact</a></li>
             </ul>
         </div>
 
@@ -622,12 +576,12 @@
         <div class="company_sections text-gray-600">
             <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">Sections</h1>
             <ul class="list-none">
-                <li class="my-2">fiction</li>
-                <li class="my-2">Children's</li>
-                <li class="my-2">Science</li>
-                <li class="my-2">History</li>
-                <li class="my-2">periodlicals</li>
-                <li class="my-2">Digital Lab</li>
+                <li class="my-2"><a href="#"  class="hover:border-b-2">fiction</a></li>
+                <li class="my-2"><a href="#"  class="hover:border-b-2">Children's</a></li>
+                <li class="my-2"><a href="#"  class="hover:border-b-2">Science</a></li>
+                <li class="my-2"><a href="#"  class="hover:border-b-2">History</a></li>
+                <li class="my-2"><a href="#"  class="hover:border-b-2">periodlicals</a></li>
+                <li class="my-2"><a href="#"  class="hover:border-b-2">Digital Lab</a></li>
             </ul>
         </div>
 
