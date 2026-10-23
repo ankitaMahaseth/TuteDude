@@ -1,0 +1,47 @@
+
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+function Footer() {
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubscribe = (e) => {
+    e.preventDefault()
+
+    if (!email.trim()) {
+      setMessage('Please enter your email address.')
+      return
+    }
+
+    setMessage('Thanks for your interest!')
+    setEmail('')
+  }
+
+  const currentYear = new Date().getFullYear()
+
+  const linkClass =
+    'text-gray-400 transition-colors duration-200 hover:text-indigo-400'
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 text-center">
+        {/* Bottom Footer */}
+        <div className="flex flex-col items-center justify-center gap-4 pt-6 text-center sm:flex-row sm:text-left">
+          <p className="text-sm text-gray-200">
+            © {currentYear} Ankita Mahaseth. All rights reserved.
+          </p>
+
+          <Link
+            to="/"
+            className="text-sm text-gray-400 transition hover:text-indigo-400"
+          >
+            Made with ❤️
+          </Link>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
