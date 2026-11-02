@@ -1,0 +1,16 @@
+{
+  "name": "expressIntro",
+  "version": "1.0.0",
+  "description": "This is the introduction.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0",
+    "nodemon": "^3.1.14"
+  }
+}
