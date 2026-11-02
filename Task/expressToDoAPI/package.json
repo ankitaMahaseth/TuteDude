@@ -1,5 +1,5 @@
 {
-  "name": "expressIntro",
+  "name": "expressToDoAPI",
   "version": "1.0.0",
   "description": "This is the introduction.",
   "main": "index.js",
