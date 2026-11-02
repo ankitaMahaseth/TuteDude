@@ -18,7 +18,7 @@ const pages = {
 // Static Files
 const staticFiles = {
   "/images/laundry_img.jpg": {
-    filePath: path.join(__dirname, "images", "laundry_img.jpg"),
+    filePath: path.join(__dirname, "public", "images", "laundry_img.jpg"),
     contentType: "image/jpeg",
   },
 };
@@ -81,7 +81,7 @@ const app = http.createServer(async (req, res) => {
   // Handling Invalid Routes (404 Page)
   try {
     const data = await fs.promises.readFile(
-      path.join(__dirname, "pages", "404.html"),
+      path.join(__dirname, "public", "404.html"),
       "utf8",
     );
 
