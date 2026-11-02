@@ -1,4 +1,3 @@
-
 // Importing Core Node.js Modules
 import http from "node:http";
 import fs from "node:fs";
@@ -11,13 +10,13 @@ const __dirname = path.dirname(__filename);
 
 // HTML Page Paths
 const pages = {
-  "/": path.join(__dirname, "pages", "home.html"),
+  "/": path.join(__dirname, "pages", "index.html"),
   "/about": path.join(__dirname, "pages", "about.html"),
   "/contact": path.join(__dirname, "pages", "contact.html"),
 };
 
 // Static Files
-const staticFiles = { 
+const staticFiles = {
   "/images/laundry_img.jpg": {
     filePath: path.join(__dirname, "images", "laundry_img.jpg"),
     contentType: "image/jpeg",
@@ -26,7 +25,6 @@ const staticFiles = {
 
 // Creating HTTP Server
 const app = http.createServer(async (req, res) => {
-
   // Extracting URL Path
   const pathname = new URL(req.url, "http://localhost").pathname;
 
@@ -50,7 +48,6 @@ const app = http.createServer(async (req, res) => {
       });
 
       return res.end(data);
-
     } catch (error) {
       res.writeHead(404, {
         "Content-Type": "text/plain",
@@ -70,7 +67,6 @@ const app = http.createServer(async (req, res) => {
       });
 
       return res.end(data);
-
     } catch (error) {
       res.writeHead(500, {
         "Content-Type": "text/plain",
@@ -86,7 +82,7 @@ const app = http.createServer(async (req, res) => {
   try {
     const data = await fs.promises.readFile(
       path.join(__dirname, "pages", "404.html"),
-      "utf8"
+      "utf8",
     );
 
     res.writeHead(404, {
@@ -94,7 +90,6 @@ const app = http.createServer(async (req, res) => {
     });
 
     return res.end(data);
-
   } catch (error) {
     res.writeHead(404, {
       "Content-Type": "text/plain",
@@ -102,7 +97,6 @@ const app = http.createServer(async (req, res) => {
 
     return res.end("404 - Page Not Found");
   }
-
 });
 
 // PORT Number
