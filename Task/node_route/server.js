@@ -10,9 +10,9 @@ const __dirname = path.dirname(__filename);
 
 // HTML Page Paths
 const pages = {
-  "/": path.join(__dirname, "pages", "index.html"),
-  "/about": path.join(__dirname, "pages", "about.html"),
-  "/contact": path.join(__dirname, "pages", "contact.html"),
+  "/": path.join(__dirname, "public", "index.html"),
+  "/about": path.join(__dirname, "public", "about.html"),
+  "/contact": path.join(__dirname, "public", "contact.html"),
 };
 
 // Static Files
