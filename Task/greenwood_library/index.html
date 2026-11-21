@@ -7,68 +7,18 @@
         
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Greenwood Library Landing Page</title>
 
-   <style>
-        html { scroll-behavior: smooth; }
-		
-        body { overflow-x: hidden; }
-		
-        *, *::before, *::after { box-sizing: border-box; }
-		
-        img { max-width: 100%; }
-		
-		.nav-link {
-    position: relative;
-    display: inline-block;
-    color: #6b7280; /* text-gray-500 */
-    font-weight: 500; /* font-medium */
-    transition: color 300ms ease;
-}
-
-.nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px; /* -bottom-2 */
-    width: 0;
-    height: 2px;
-    background-color: #4b5563; /* bg-gray-600 */
-    transition: width 300ms ease;
-}
-
-.nav-link:hover {
-    color: #111827; /* text-gray-900 */
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-        section[id] { scroll-margin-top: 5rem; }
-		
-        .mobile-menu[hidden] { display: none; }
-		
-        @media (max-width: 639px) {
-            .mobile-menu a { display: block; padding: .75rem .25rem; }
-            #contact { padding: 1.5rem; }
-            #testimonial { padding-left: 1rem; padding-right: 1rem; }
-            #testimonial .flex { gap: 1rem; }
-            #testimonial img { width: 3.5rem; height: 3.5rem; object-fit: cover; }
-            #ourSpaces figcaption { gap: .5rem; flex-wrap: wrap; }
-            #membership .flex.max-w-full, #events .flex.max-w-full {
-                gap: 1rem; flex-wrap: wrap;
-            }
-        }
-    </style>
 </head>
 
-<body class="bg-white">
+<body class="max-w-7xl bg-white mx-auto">
 
     <!-- ================= NAVBAR ================= -->
-<header class="sticky top-0 z-50 bg-white px-4 backdrop-blur-md">
+    <header class="sticky top-0 z-50 bg-white px-4 backdrop-blur-md">
 
-        <nav class="mx-auto flex min-h-16 max-w-full items-center justify-between gap-3 px-2 sm:px-8">
+        <nav class="flex flex-column min-h-16 max-w-7xl items-center justify-between gap-3 px-2 sm:px-8">
 
             <!-- Logo -->
             <div class="flex items-center gap-1 justify-center">
@@ -88,12 +38,13 @@
             <!-- Mobile menu button -->
             <button id="menuBtn" class="md:hidden text-2xl"
                 aria-label="Toggle navigation"
-                aria-expanded="false">
-                 ☰
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+                ☰
             </button>
 
             <div id="mobileMenu"
-                class="hidden flex-col gap-4 py-4 md:hidden">
+                class="hidden absolute inset-x-0 top-full flex-col gap-4 border-t border-gray-100 bg-white px-6 py-4 shadow-md md:hidden">
                 <a href="#ourSections">Sections</a>
                 <a href="#ourSpaces">Gallery</a>
                 <a href="#membership">Membership</a>
@@ -101,408 +52,393 @@
             </div>
 
             <!-- VISIT US BUTTON -->
-            <div class="hidden sm:block">
+            <div class="hidden sm:block ">
                 <a href="#contact" class="rounded-full border-2 border-gray-200 px-4 py-2 text-sm  after:duration-300 hover:bg-black hover:text-gray-200 hover:border-0">
                     Visit Us
                 </a>
             </div>
         </nav>
-        <div id="mobileMenu" class="mobile-menu border-t border-gray-100 bg-white px-6 py-3 md:hidden" hidden>
-            <a href="#ourSections" class="text-gray-600 hover:text-gray-900">Sections</a>
-            <a href="#ourSpaces" class="text-gray-600 hover:text-gray-900">Gallery</a>
-            <a href="#membership" class="text-gray-600 hover:text-gray-900">Membership</a>
-            <a href="#events" class="text-gray-600 hover:text-gray-900">Events</a>
-            <a href="#contact" class="text-gray-600 hover:text-gray-900">Visit Us</a>
-        </div>
     </header>
 
  <!-- MAIN -->
-<main class="container mx-auto px-4 sm:px-6 lg:px-8">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-10">
+            <!-- 1. HERO SECTION -->
+            <div class="grid grid-cols-1 items-center gap-5 md:grid-cols-2 md:gap-12 py-10">
 
-    <!-- 1. HERO SECTION -->
-    <section class="mx-auto grid min-h-[500px] max-w-7xl grid-cols-1 items-center gap-8 py-10 md:grid-cols-2 md:gap-12">
+            <!-- Hero Content -->
+            <div class="flex flex-col items-start justify-center">
+                <p class="text-3xl leading-tight text-slate-900 sm:text-5xl lg:text-5xl">
+                    Your Neighbourhood
+                    <br class="hidden sm:block" />
+                    Library.
+                </p>
 
-        <!-- Hero Content -->
-        <div class="flex flex-col items-start justify-center">
-            <p class="text-3xl leading-tight
-                       text-slate-900 sm:text-5xl lg:text-5xl">
-                Your Neighbourhood
-                <br class="hidden sm:block" />
-                Library.
-            </p>
+                <p class="my-5 max-w-lg text-base leading-7
+                            text-slate-600 sm:text-lg">
+                    Thousands of books, quiet reading rooms, community
+                    events, and free Wi-Fi — serving Greenwood since 1983.
+                </p>
 
-            <p class="mt-5 max-w-lg text-base leading-7
-                      text-slate-600 sm:text-lg">
-                Thousands of books, quiet reading rooms, community
-                events, and free Wi-Fi — serving Greenwood since 1983.
-            </p>
-
-            <!-- HERO Buttons -->
-            <div class="mt-6 flex flex-wrap items-center gap-3">
+                <!-- HERO Buttons -->
+                <div class="my-5 flex flex-wrap items-center gap-5">
 
                 <a href="#ourSpaces"
-                   class="rounded-full bg-slate-900 px-6 py-3
-          text-base font-medium text-gray-200
-          border-2 border-transparent
-          transition hover:bg-transparent hover:text-black
-          hover:border-black">
-                    Explore Collection</a>
-                
+                    class="rounded-full bg-slate-900 px-6 py-3
+                            text-base font-medium text-gray-200
+                            border-2 border-transparent
+                            transition hover:bg-transparent hover:text-black
+                            hover:border-black">
+                            Explore Collection</a>                    
 
-                <a href="#membership"
-                   class="rounded-full border-2 border-slate-300
-                          px-8 py-3 text-base font-medium text-slate-900
-                          transition hover:border-black hover:text-black
-                          ">
-                    Join Free</a>
-                
+                    <a href="#membership"
+                        class="rounded-full border-2 border-slate-300
+                                px-8 py-3 text-base font-medium text-slate-900
+                                transition hover:border-black hover:text-black
+                                ">
+                                Join Free</a>
+                </div>
+            </div>
 
+            <!-- Hero Image -->
+            <div class="flex items-center justify-center">
+                <div class="overflow-hidden rounded-2xl">
+                    <img
+                    src="images/library.jpg"
+                    alt="Greenwood library"
+                    class="h-64 w-full rounded-2xl object-cover shadow-lg brightness-85
+                            sm:h-80 md:h-96
+                            transform transition-transform duration-300
+                            hover:scale-102"
+                        />
+                </div>
             </div>
         </div>
 
-        <!-- Hero Image -->
-        <div class="flex items-center justify-center">
-            <img
-                src="images/library.jpg"
-                alt="Greenwood library"
-                class="h-64 w-full rounded-2xl object-cover shadow-lg brightness-80
-                       sm:h-80 md:h-96 transform transition-transform duration-300 hover:scale-105"
-            />
-        </div>
-    </section>
-
     <!-- 2. COMPANY COUNTER DATA -->
-    <section class="border-t-2 border-t-gray-100" id="counter">
-        <div class="grid grid-cols-2 gap-4 py-5 sm:grid-cols-4">
+    <div class="border-t-2 border-t-gray-100" id="counter">
+        <div class="grid grid-cols-2 text-start gap-10 py-5 md:grid-cols-4">
             
-            <div class="p-6">
+            <div>
                 <p class="text-2xl font-bold">12000+</p>
                 <p class="text-slate-400">Books &  Journals</p>
             </div>
-            <div class="p-6">
+            <div>
                 <p class="text-2xl font-bold">40+</p>
                 <p class="text-slate-400">Years of Service</p>
             </div>
-            <div class="p-6">
+            <div>
                 <p class="text-2xl font-bold text-green-700">Free</p>
                 <p class="text-slate-400">Wi-Fi & Basic Access</p>
             </div>
-            <div class="p-6">
+            <div>
                 <p class="text-2xl font-bold">6</p>
                 <p class="text-slate-400">Dedicated Sections</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- 3. OUR SECTIONS -->
-     <section id="ourSections">
-        <div class="px-5">
-            <div class="border-b-2 border-b-gray-100">
-                <h4 class="text-gray-500 font-medium uppercase mb-2">our sections</h4>
-            </div>
-        </div>
-
+    <div id="ourSections">
+            <h4 class="text-gray-500 font-medium uppercase">our sections</h4>
+            <div class="border border-gray-200 my-5"></div>
+        
         <!-- SECTION PARTS -->
-            <div class="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2">
-                <div class="group py-10 px-5 bg-[oklch(98.5%_0.002_247.839)] hover:bg-emerald-50">
-                    <h1 class="text-2xl font-semibold capitalize group-hover:text-emerald-600">fictions & literature</h1>
-                    <p class="text-gray-400 py-2">Novels, short stories and poetry - from timeless classics to new voices.</p>
-                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-emerald-600">browse fiction</a>
-                </div>
-                <div class="group py-10 px-5 bg-[oklch(98.5%_0.002_247.839)] hover:bg-amber-50">
-                    <h1 class="text-2xl font-semibold capitalize group-hover:text-amber-600">children's corner</h1>
-                    <p class="text-gray-400 py-2">Picture books, early readers and a cozy space for young learners.</p>
-                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-amber-600">browse children's</a>
-                </div>
-                <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-blue-50">
-                    <h1 class="text-2xl font-semibold capitalize group-hover:text-blue-600">science & technology</h1>
-                    <p class="text-gray-400 py-2">Research journals, textbooks and STEM reference materials.</p>
-                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-blue-600">browse science</a>
-                </div>
-                <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-red-50">
-                    <h1 class="text-2xl font-semibold capitalize group-hover:text-red-600">history & culture</h1>
-                    <p class="text-gray-400 py-2">local archives world civilisations, art history and cultural studies.</p>
-                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-red-600">browse history</a>
-                </div>
-                <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-rose-50">
-                    <h1 class="text-2xl font-semibold group-hover:text-pink-600">periodlicals & newspapers</h1>
-                    <p class="text-gray-400 py-2">Daily papers, weekly magazines and curated subscriptions.</p>
-                    <a href="#" class="link text-gray-400 underline group-hover:text-pink-600">Browse periodlicals</a>
-                </div>
-                <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-cyan-50">
-                    <h1 class="text-2xl font-semibold capitalize group-hover:text-cyan-600">digital media lab</h1>
-                    <p class="text-gray-400 py-2">Public computers, e-book access and digital literacy resources.</p>
-                    <a href="" class="link text-gray-400 underline capitalize group-hover:text-cyan-600">Browse digital</a>
-                </div>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="group py-10 px-5 bg-[oklch(98.5%_0.002_247.839)] hover:bg-emerald-50">
+                <h1 class="text-2xl font-semibold capitalize group-hover:text-emerald-600">fictions & literature</h1>
+                <p class="text-gray-400 py-2">Novels, short stories and poetry - from timeless classics to new voices.</p>
+                <a href="#" class="link text-gray-400 underline capitalize group-hover:text-emerald-600">Browse fiction</a>
             </div>
-     </section>
-
-      <!-- 4. OUR SPACES  -->
-     <section id="ourSpaces">
-        <div class="px-5">
-            <div class="border-b-2 border-b-gray-100">
-                <h4 class="text-gray-500 font-medium uppercase mb-2">our spaces</h4>
+            <div class="group py-10 px-5 bg-[oklch(98.5%_0.002_247.839)] hover:bg-amber-50">
+                <h1 class="text-2xl font-semibold capitalize group-hover:text-amber-600">children's corner</h1>
+                <p class="text-gray-400 py-2">Picture books, early readers and a cozy space for young learners.</p>
+                <a href="#" class="link text-gray-400 underline capitalize group-hover:text-amber-600">Browse children's</a>
+            </div>
+            <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-blue-50">
+                <h1 class="text-2xl font-semibold capitalize group-hover:text-blue-600">science & technology</h1>
+                <p class="text-gray-400 py-2">Research journals, textbooks and STEM reference materials.</p>
+                <a href="#" class="link text-gray-400 underline capitalize group-hover:text-blue-600">Browse science</a>
+            </div>
+            <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-red-50">
+                <h1 class="text-2xl font-semibold capitalize group-hover:text-red-600">history & culture</h1>
+                <p class="text-gray-400 py-2">local archives world civilisations, art history and cultural studies.</p>
+                <a href="#" class="link text-gray-400 underline capitalize group-hover:text-red-600">Bowse history</a>
+            </div>
+            <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-rose-50">
+                <h1 class="text-2xl font-semibold capitalize group-hover:text-pink-600">periodlicals & newspapers</h1>
+                <p class="text-gray-400 py-2">Daily papers, weekly magazines and curated subscriptions.</p>
+                <a href="#" class="link text-gray-400 underline group-hover:text-pink-600">Browse periodlicals</a>
+            </div>
+            <div class="group p-6 bg-[oklch(98.5%_0.002_247.839)] hover:bg-cyan-50">
+                <h1 class="text-2xl font-semibold capitalize group-hover:text-cyan-600">digital media lab</h1>
+                <p class="text-gray-400 py-2">Public computers, e-book access and digital literacy resources.</p>
+                <a href="#" class="link text-gray-400 underline capitalize group-hover:text-cyan-600">Browse digital</a>
             </div>
         </div>
+    </div>
+
+    <!-- 4. OUR SPACES  -->
+    <div id="ourSpaces">
+        <h4 class="text-gray-500 font-medium uppercase mb-2">our spaces</h4>
+        <div class="border border-gray-200 my-5"></div>
         
-            <div class="my-5 flex max-w-full flex-wrap items-center justify-between gap-3 px-3 sm:px-5">
-                <h1 class="font-bold text-2xl">Inside the Library</h1>
-                <a href="#" class=" cursor-pointer rounded-full border-2 border-gray-200 px-4 py-2 text-sm transition duration-300 hover:bg-black hover:text-gray-200">
-                    View All
-                </a>
+        <div class="flex flex-wrap items-center justify-between gap-5">
+            <h1 class="font-bold text-2xl">Inside the Library</h1>
+            <a href="#" class=" cursor-pointer rounded-full border-2 border-gray-200 px-4 py-2 text-sm transition duration-300 hover:bg-black hover:text-gray-200">
+                View All
+            </a>
+        </div>
+        
+        <!-- GALLERY IMAGES -->
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 mt-5">
+
+            <!-- image 1 -->
+            <div>
+                <div class="rounded-lg overflow-hidden">
+                    <img src="images/library.jpg" alt="" 
+                    class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
+                    />
+                </div>
+                
+                
+                <!-- Figcaption -->
+                <figcaption class="p-3 flex max-w-7xl items-center justify-between">
+                    <p class="text-lg capitalize font-semibold">reading hall</p>
+                    <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
+                        main floor
+                    </button>
+                </figcaption>
             </div>
+
+            <!-- image 2-->
+            <div>
+                <div class="rounded-lg overflow-hidden">
+                    <img src="images/library3.jpg" alt="" 
+                    class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
+                    />
+                </div>
+                
+                
+                <!-- Figcaption -->
+                <figcaption class="p-3 flex max-w-7xl items-center justify-between">
+                    <p class="text-lg capitalize font-semibold">fiction collection</p>
+                    <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
+                        2nd floor
+                    </button>
+                </figcaption>
+            </div>
+
+            <!-- image 3 -->
+            <div>
+                <img src="images/library2.png" alt="" 
+                class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
+                
+                <!-- Figcaption -->
+                <figcaption class="p-3 flex max-w-7xl items-center justify-between">
+                    <p class="text-lg capitalize font-semibold">Archive Wing</p>
+                    <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
+                        basement
+                    </button>
+                </figcaption>
+            </div>
+
+            <!-- image 4-->
+            <div>
+                <img src="images/digital_media_lab.jpg" alt="" 
+                class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
+                
+                <!-- Figcaption -->
+                <figcaption class="p-3 flex max-w-7xl items-center justify-between">
+                    <p class="text-lg capitalize font-semibold">Digital Media Lab</p>
+                    <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
+                        ground floor
+                    </button>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. WHY GREENWOOD -->
+    <div id="whyMe">
+        <h4 class="text-gray-400 uppercase font-medium mb-2 ">why greenwood</h4>
+        <div class="border border-gray-200 my-5"></div>
+        
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="p-6 bg-gray-50 hover:bg-gray-100">
+            <h1 class="text-sm uppercase text-gray-600">about</h1>
+            <p class="my-10 uppercase [word-spacing:2px] font-semibold">a place for<br/> everyone.</p>
+        </div>
+        <div class="p-6 bg-yellow-50 hover:bg-yellow-100">
+            <h1 class="text-sm text-gray-600 uppercase">community</h1>
+            <p class="my-10 uppercase [word-spacing:2px] font-semibold">open doors, <br/> open minds.</p>
             
-            <!-- GALLERY IMAGES -->
-            <div class="grid grid-cols-1 gap-6 p-5 sm:grid-cols-2">
-                <div>
-                    <div class="rounded-lg overflow-hidden">
-                         <!-- image 1 -->
-                     <img src="images/library.jpg" alt="" 
-                     class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
-                     />
-                    </div>
-                   
-                    
-                    <!-- Figcaption -->
-                    <figcaption class="p-3 flex max-w-full items-center justify-between">
-                        <p class="text-lg capitalize font-semibold">reading hall</p>
-                        <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
-                            main floor
-                        </button>
-                    </figcaption>
-                </div>
-
-                <div>
-                    <div class="rounded-lg overflow-hidden">
-                         <!-- image 2-->
-                     <img src="images/library3.jpg" alt="" 
-                     class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
-                     />
-                    </div>
-                   
-                    
-                    <!-- Figcaption -->
-                    <figcaption class="p-3 flex max-w-full items-center justify-between">
-                        <p class="text-lg capitalize font-semibold">fiction collection</p>
-                        <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
-                            2nd floor
-                        </button>
-                    </figcaption>
-                </div>
-
-                <div>
-                    <!-- image 3 -->
-                     <img src="images/library2.png" alt="" 
-                     class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
-                     />
-                    
-                    <!-- Figcaption -->
-                    <figcaption class="p-3 flex max-w-full items-center justify-between">
-                        <p class="text-lg capitalize font-semibold">Archive Wing</p>
-                        <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
-                            basement
-                        </button>
-                    </figcaption>
-                </div>
-
-                <div>
-                    <!-- image 4-->
-                     <img src="images/digital_media_lab.jpg" alt="" 
-                     class=" h-70 w-full object-cover brightness-80 transform transition-transform duration-300  hover:scale-[1.02]"
-                     />
-                    
-                    <!-- Figcaption -->
-                    <figcaption class="p-3 flex max-w-full items-center justify-between">
-                        <p class="text-lg capitalize font-semibold">Digital Media Lab</p>
-                        <button class="px-3 py-1 text-xs font-normal rounded-full border-2 border-gray-200 capitalize">
-                            ground floor
-                        </button>
-                    </figcaption>
-                </div>
-            </div>
-     </section>
-
-     <!-- 5. WHY GREENWOOD -->
-     <section id="whyMe">
-        <div class="px-5">
-            <div class="border-b-2 border-b-gray-100">
-            <h4 class="text-gray-400 uppercase font-medium mb-2 ">why greenwood</h4>
         </div>
+        <div class="p-6 bg-blue-50 hover:bg-blue-100">
+            <h1 class="text-sm text-gray-600 uppercase">40+ Years</h1>
+            <p class="my-10 uppercase [word-spacing:2px] font-semibold">trusted by <br/> generations.</p>
         </div>
-        
-        <div class="grid grid-cols-1 gap-4 p-5 sm:grid-cols-3">
-            <div class="p-6 bg-gray-50 hover:bg-gray-100">
-                <h1 class="text-sm uppercase text-gray-600">about</h1>
-                <p class="my-10 uppercase [word-spacing:2px] font-semibold">a place for<br/> everyone.</p>
-            </div>
-            <div class="p-6 bg-yellow-50 hover:bg-yellow-100">
-                <h1 class="text-sm text-gray-600 uppercase">community</h1>
-                <p class="my-10 uppercase [word-spacing:2px] font-semibold">open doors, <br/> open minds.</p>
-                
-            </div>
-            <div class="p-6 bg-blue-50 hover:bg-blue-100">
-                <h1 class="text-sm text-gray-600 uppercase">40+ Years</h1>
-                <p class="my-10 uppercase [word-spacing:2px] font-semibold">trusted by <br/> generations.</p>
-            </div>
-            <div class="p-6 bg-pink-50 hover:bg-pink-100">
-                <h1 class="text-sm uppercase text-gray-600">events</h1>
-                <p class="my-10 uppercase [word-spacing:2px] font-semibold">learn beyond <br/> books.</p>
-            </div>
-            <div class="p-6 bg-purple-50 hover:bg-purple-100">
-                <h1 class="text-sm text-gray-600 uppercase">digital</h1>
-                <p class="my-10 uppercase [word-spacing:2px] font-semibold">e-books, wi-fi<br/> and computers.</p>
-                
-            </div>
-            <div class="p-6 bg-red-50 hover:bg-red-100">
-                <h1 class="text-sm text-gray-600 uppercase">access</h1>
-                <p class="my-10 uppercase [word-spacing:2px] font-semibold">no barriers,  <br/> no knowledge.</p>
-            </div>
+        <div class="p-6 bg-pink-50 hover:bg-pink-100">
+            <h1 class="text-sm uppercase text-gray-600">events</h1>
+            <p class="my-10 uppercase [word-spacing:2px] font-semibold">learn beyond <br/> books.</p>
         </div>
-     </section> 
+        <div class="p-6 bg-purple-50 hover:bg-purple-100">
+            <h1 class="text-sm text-gray-600 uppercase">digital</h1>
+            <p class="my-10 uppercase [word-spacing:2px] font-semibold">e-books, wi-fi<br/> and computers.</p>
+            
+        </div>
+        <div class="p-6 bg-red-50 hover:bg-red-100">
+            <h1 class="text-sm text-gray-600 uppercase">access</h1>
+            <p class="my-10 uppercase [word-spacing:2px] font-semibold">no barriers,  <br/> no knowledge.</p>
+        </div>
+    </div>
+    </div> 
 
-     <!-- 6. ABOUT ME -->
-      <section class="my-5" id="aboutMe">
+    <!-- 6. ABOUT ME -->
+    <div id="aboutMe">
         <div class="about_heading">
             <h2 class="mx-auto max-w-4xl text-center
                         text-2xl leading-tight sm:text-3xl lg:text-4xl">
                 More than a building full of books — a home for curious minds.
             </h2>
             <div class="flex justify-center">
-                 <div class="grid grid-cols-1 gap-2 sm:w-2/3 sm:grid-cols-2">
-                    <div class="py-6">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Ex eligendi accusamus optio et tenetur velit soluta alias consequuntur harum ullam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          accusamus optio et tenetur velit soluta alias consequuntur harum ullam.</p>
-                    </div>
-                    <div class="py-6">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          accusamus optio et tenetur velit soluta alias consequuntur harum ullam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          accusamus optio et tenetur velit soluta alias consequuntur harum ullam.</p>
-                    </div>
+                <div class="grid grid-cols-1 gap-5 sm:w-2/3 sm:grid-cols-2 my-5">
+                    <!-- <div class="flex flex-row gap-10"> -->
+                
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Ex eligendi accusamus optio et tenetur velit soluta alias consequuntur harum ullam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        accusamus optio et tenetur velit soluta alias consequuntur harum ullam.</p>
+                
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        accusamus optio et tenetur velit soluta alias consequuntur harum ullam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        accusamus optio et tenetur velit soluta alias consequuntur harum ullam.</p>
                 </div>
             </div> 
         </div>
-    </section>
+    </div>
 
     <!-- 7. MEMBERSHIP -->
-     <section id="membership">
-        <div class="px-5">
-            <div class="border-b-2 border-b-gray-100">
-            <h4 class="text-gray-500 uppercase mb-2">membership</h4>
+    <div id="membership">
+        <h4 class="text-gray-500 uppercase mb-2">membership</h4>
+        <div class="border border-gray-200 my-5"></div>
+    
+        <div class="flex max-w-7xl items-center justify-between ">
+            <h1 class="font-bold text-2xl capitalize">join the Library</h1>
+                <a href="#" class="px-4 py-2 text-sm font-medium rounded-full border-2 border-gray-200 capitalize transition duration-300 hover:bg-black hover:text-white">
+                    sign up
+                </a>
         </div>
-        </div>
-        
-        <div class="my-5 px-5">
-            <div class="flex max-w-full items-center justify-between ">
-                <h1 class="font-bold text-2xl capitalize">join the Library</h1>
-                <div>
-                    <a href="#"
-                    class="px-4 py-2 text-sm font-medium rounded-full border-2 border-gray-200 capitalize transition duration-300 hover:bg-black hover:text-white">
-                        sign up
-                    </a>
-                </div> 
+
+        <!-- Membership Grid -->
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 py-5">
+
+            <!-- Introduction Panel -->
+                
+            <div class="p-6 bg-green-50 hover:bg-green-100 flex flex-col h-full">
+                <p class="text-sm uppercase text-gray-600 ">choose a plan</p>
+                <p class="my-6 text-[22px] [word-spacing:2px] font-semibold">Everyone is <br/> welcome here.</p>
+                <p class="text-gray-400 mb-12">Membership unlocks borrowing study rooms and priority events.</p>
+
+                <button class="mt-auto text-center rounded-full capitalize bg-black text-white py-3 text-sm transition duration-300  hover:bg-transparent hover:text-black hover:border hover:border-black">
+                    learn more
+                </button>
             </div>
 
-            <!-- Membership Grid -->
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 py-5">
+            <!-- BASIC PLAN -->
+            <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
 
-                <!-- Introduction Panel -->
-                 
-                <div class="p-6 bg-green-50 hover:bg-green-100 flex flex-col h-full">
-                    <p class="text-sm uppercase text-gray-600 ">choose a plan</p>
-                    <p class="my-6 text-[22px] [word-spacing:2px] font-semibold">Everyone is <br/> welcome here.</p>
-                    <p class="text-gray-400 mb-12">Membership unlocks borrowing study rooms and priority events.</p>
+                <!-- image -->
+                <img src="images/basic_membership.jpg" alt="" 
+                class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
+            
+                <div class="flex flex-1 flex-col p-5">
+                    <div class="my-2">
+                        <h3 class="text-xl font-semibold">Basic</h3>
+                        <p class="mt-2 text-2xl text-gray-500">Free</p>
+                        <p class="mt-3 text-sm leading-6 text-gray-400">
+                            3 books · Reading Rooms · Wi-Fi
+                        </p>
+                    </div>
+                    
 
-                    <button class="mt-auto text-center rounded-full capitalize bg-black text-white py-3 text-sm transition duration-300  hover:bg-transparent hover:text-black hover:border hover:border-black">
-                        learn more
+                    <button class=" mt-auto text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
+                            py-3 text-sm transition duration-300
+                            hover:bg-black hover:text-white"
+                    >
+                        join free
                     </button>
                 </div>
+            
+            </div>            
 
-                <!-- BASIC PLAN -->
-                    <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+            <!-- STUDENT PLAN -->
+            <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
 
-                        <!-- image -->
-                        <img src="images/basic_membership.jpg" alt="" 
-                        class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
-                        />
+                <!-- image -->
+                <img src="images/student.jpg" alt="" 
+                class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
+            
+                <div class="flex flex-1 flex-col p-5">
+                    <div class="my-2">
+                        <h3 class="text-xl font-semibold capitalize">Student</h3>
+                        <p class="mt-2 text-2xl text-gray-500">₹ 200/ <span class="text-sm"> yr</span></p>
+                        <p class="mt-3 text-sm leading-6 text-gray-400">
+                            8 books · Digital Catalouge · Study Rooms
+                        </p>
+                    </div>
                     
-                        <div class="flex flex-1 flex-col p-7">
-                            <h3 class="text-xl font-semibold">Basic</h3>
-                            <p class="mt-2 text-2xl text-gray-500">Free</p>
-                            <p class="mt-3 text-sm leading-6 text-gray-400">
-                                3 books · Reading Rooms · Wi-Fi
-                            </p>
 
-                            <button class=" mt-auto text-center mt-8 w-full rounded-full border-2 border-gray-300 capitalize
-                                    py-3 text-sm transition duration-300
-                                    hover:bg-black hover:text-white"
-                            >
-                              join free
-                            </button>
-                        </div>
+                    <button
+                        class="mt-auto text-center w-full rounded-full border-2 border-gray-300 capitalize bg-black text-white
+                            py-3 text-sm transition duration-300
+                            hover:bg-transparent hover:text-black hover:border-black "
+                    >
+                        join now
+                    </button>
+                </div>
+            
+            </div>            
+
+            <!-- FAMILY PLAN -->
+            <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+
+                <!-- image -->
+                <img src="images/library.jpg" alt="" 
+                class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
+            
+                <div class="flex flex-1 flex-col p-5">
+                    <div class="my-2">
+                         <h3 class="text-xl font-semibold">Family</h3>
+                        <p class="mt-2 text-2xl text-gray-500">₹ 500/<span class="text-sm"> yr</span></p>
+                        <p class="mt-3 text-sm leading-6 text-gray-400">
+                            15 books · All Benefits · Priority Events
+                        </p>
+
+                    </div>
                    
-                    </div>            
-
-                 <!-- STUDENT PLAN -->
-                    <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
-
-                        <!-- image -->
-                        <img src="images/student.jpg" alt="" 
-                        class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
-                        />
-                    
-                        <div class="flex flex-1 flex-col p-7">
-                            <h3 class="text-xl font-semibold capitalize">Student</h3>
-                            <p class="mt-2 text-2xl text-gray-500">₹ 200/ <span class="text-sm"> yr</span></p>
-                            <p class="mt-3 text-sm leading-6 text-gray-400">
-                                8 books · Digital Catalouge · Study Rooms
-                            </p>
-
-                            <button
-                                class="mt-auto text-center w-full rounded-full border-2 border-gray-300 capitalize bg-black text-white
-                                    py-3 text-sm transition duration-300
-                                    hover:bg-transparent hover:text-black hover:border-black "
-                            >
-                                join now
-                            </button>
-                        </div>
-                   
-                    </div>            
-
-                 <!-- FAMILY PLAN -->
-                    <div class="rounded-lg shadow-sm overflow-hidden flex flex-col h-120">
-
-                        <!-- image -->
-                        <img src="images/library.jpg" alt="" 
-                        class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
-                        />
-                    
-                        <div class="flex flex-1 flex-col p-7">
-                            <h3 class="text-xl font-semibold">Family</h3>
-                            <p class="mt-2 text-2xl text-gray-500">₹ 500/<span class="text-sm"> yr</span></p>
-                            <p class="mt-3 text-sm leading-6 text-gray-400">
-                                15 books · All Benefits · Priority Events
-                            </p>
-
-                            <a href="#"
-                                class="mt-auto text-center w-full rounded-full border-2 border-gray-300 capitalize
-                                    py-3 text-sm transition duration-300
-                                    hover:bg-black hover:text-white"
-                            >
-                                join now
-                            </a>
-                        </div>
-                   
-                    </div>            
-            </div>
+                    <a href="#"
+                        class="mt-auto text-center w-full rounded-full border-2 border-gray-300 capitalize
+                            py-3 text-sm transition duration-300
+                            hover:bg-black hover:text-white"
+                    >
+                        join now
+                    </a>
+                </div>
+            
+            </div>            
         </div>
-     </section> 
+    </div> 
 
-     <!-- 8. Testimonial  -->
-     <section class="testimonial mx-auto max-w-4xl px-6 py-10" id="testimonial">
+    <!-- 8. Testimonial  -->
+    <div class="testimonial mx-auto max-w-4xl px-6 py-10" id="testimonial">
         <div class="py-6 border-t-2 border-t-gray-100">   
             <div class="flex items-start gap-6 sm:gap-16">
-                 <!-- Profile Image -->
+                    <!-- Profile Image -->
                 <div class="shrink-0 grayscale hover:grayscale-0 border rounded-full p-2">
                     <img src="images/avatar.jpg" alt="testimonial_profile" class="h-20 rounded-full ">
                 </div>
@@ -517,194 +453,189 @@
                         — Meera Desai, volunteer at the children's section
     `               </p>
                 </div> 
-            </div>
-    </section>
+            </div>    
+        </div>
+    </div>
 
     <!--9. CONTACT -->
-     <section class="bg-emerald-50  p-10 rounded" id="contact">
-        <div class="contact_hedaing uppercase text-gray-600 tracking-wide py-3">
-            contact
-        </div>
-        <div class="contact_msg">
-            <h2 class="text-2xl leading-tight text-gray-800 sm:text-3xl lg:text-4xl">Visit us at 42 Elm Street, Greenwood.</h2>
+    <div class="bg-emerald-50  p-10 rounded" id="contact">
+    <div class="contact_hedaing uppercase text-gray-600 tracking-wide py-3">
+        contact
+    </div>
+    <div class="contact_msg">
+        <h2 class="text-2xl leading-tight text-gray-800 sm:text-3xl lg:text-4xl">Visit us at 42 Elm Street, Greenwood.</h2>
 
+    </div>
+    <div class="mt-6 grid w-full grid-cols-1 gap-3
+        p-3 sm:w-full sm:grid-cols-3">
+            <p class="text-gray-600">Mon - Fri: 8am - 7pm</p>
+            <p class="text-gray-600">Sat: 9am - 5pm</p>
+            <p class="text-gray-600">Sun: Closed</p>
+    </div>
+    <div class="mt-6 flex flex-wrap items-center gap-5">
+        <div>
+                <a href="https://google.com" class="bg-black text-gray-200 rounded-full capitalize
+                                py-2 px-3 text-sm transition duration-300
+                                hover:border border-gray-400 hover:bg-transparent hover:text-black">
+                    Get Directions
+                </a>
         </div>
-        <div class="mt-6 grid w-full grid-cols-1 gap-3
-            p-3 sm:w-full sm:grid-cols-3">
-                <p class="text-gray-600">Mon - Fri: 8am - 7pm</p>
-                <p class="text-gray-600">Sat: 9am - 5pm</p>
-                <p class="text-gray-600">Sun: Closed</p>
+        <div>
+                <a href="https://greenwood.org" class="text-gray-600">
+                greenwood.org
+        </a>
+
+        <a href="tel:+911234567890"
+            class="text-gray-600">
+            +91 1234567890
+        </a>
         </div>
-        <div class="mt-6 flex flex-wrap items-center gap-5">
+            
+        
+    </div>
+    </div>
+
+    <!-- 10. EVENTS -->
+    <div class="events my-5" id="events">
+        <h4 class="text-gray-400 uppercase ">events</h4>
+        <div class="border border-gray-200 my-5"></div>
+        <div class="flex max-w-7xl items-center justify-between ">
+            <h1 class="font-bold text-2xl capitalize">what's coming up</h1>
+                <a href="#" class="px-2 py-1 text-sm font-medium rounded-full border capitalize transition duration-300 hover:bg-black hover:text-white">
+                    all events
+                </a>
+        </div>
+
+        <!-- Event Grid -->
+        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 py-5">
+
+            <!-- event 1 -->
             <div>
-                 <a href="https://google.com" class="bg-black text-gray-200 rounded-full capitalize
-                                    py-2 px-3 text-sm transition duration-300
-                                    hover:border border-gray-400 hover:bg-transparent hover:text-black">
-                     Get Directions
-                    </a>
-            </div>
-            <div>
-                 <a href="https://greenwood.org" class="text-gray-600">
-                 greenwood.org
-            </a>
-
-            <a href="tel:+911234567890"
-                class="text-gray-600">
-                +91 1234567890
-            </a>
-            </div>
-                
-           
-        </div>
-     </section>
-
-     <!-- 10. EVENTS -->
-      <section class="mx-auto events my-5" id="events">
-        <div class="py-6 border-b-2 border-b-gray-100">
-            <h4 class="text-gray-400 uppercase ">events</h4>
-        </div>
-        <div class="my-5">
-            <div class="flex max-w-full items-center justify-between ">
-                <h1 class="font-bold text-2xl capitalize">what's coming up</h1>
-                <div>
-                    <a href="#"
-                    class="px-2 py-1 text-sm font-medium rounded-full border capitalize transition duration-300 hover:bg-black hover:text-white">
-                        all events
-                    </a>
-                </div> 
-            </div>
-
-            <!-- Event Grid -->
-            <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-4 py-5">
-
-                <!-- event 1 -->
-                <div>
-                     <div class="rounded-lg overflow-hidden">
-                        <!-- image -->
-                    <img src="images/basic_membership.jpg" alt="" 
-                    class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
-                    />
-                
-                     </div>
-                    
-                    <div class="flex flex-1 flex-col py-3">
-                        <h3 class="text-sm font-medium">Summer Reading Challenge - open to children aged 6-14</h3>
-                        <p class="mt-2 text-xs text-gray-500">5 Aug 2026</p>
-                    </div>
-                
-                </div>            
-               
-                 <!-- event 2 -->
-                  <div>
-                <div class="rounded-lg overflow-hidden">
-
-                    <!-- image -->
-                    <img src="images/student.jpg" alt="" 
-                    class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
-                    />
-                </div>
-
-                    <div class="flex flex-1 flex-col py-3">
-                        <h3 class="text-sm font-medium">Book Club - Discussing <i>The God of Small Things</i></h3>
-                        <p class="mt-2 text-xs text-gray-500">10 Aug 2026</p>
-                    </div>
-                
-                </div>            
-
-                 <!-- event 3  -->
-                  <div>
-                <div class="rounded-lg overflow-hidden">
-
+                    <div class="rounded-lg overflow-hidden">
                     <!-- image -->
                     <img src="images/basic_membership.jpg" alt="" 
                     class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
                     />
-                </div>
-                    <div class="flex flex-1 flex-col p-3">
-                        <h3 class="text-sm font-medium">Digital Literacy Workshop - free, no registration needed</h3>
-                        <p class="mt-2 text-xs text-gray-500">18 Aug 2026</p>
+            
                     </div>
                 
-                </div> 
-                
-                 <!-- event 4  -->
-                  <div>
-                <div class="rounded-lg overflow-hidden">
+                <div class="flex flex-1 flex-col py-3">
+                    <h3 class="text-sm font-medium">Summer Reading Challenge - open to children aged 6-14</h3>
+                    <p class="mt-2 text-xs text-gray-500">5 Aug 2026</p>
+                </div>
+            
+            </div>            
+            
+                <!-- event 2 -->
+                <div>
+            <div class="rounded-lg overflow-hidden">
 
-                    <!-- image -->
-                    <img src="images/library.jpg" alt="" 
-                    class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
-                    />
-                </div>
-                    <div class="flex flex-1 flex-col p-3">
-                        <h3 class="text-sm font-medium">Author Meet: Priya Sharma - Q&A and book signing</h3>
-                        <p class="mt-2 text-xs text-gray-500">20 Auh 2026</p>
-                    </div>
-                
-                </div> 
-                
+                <!-- image -->
+                <img src="images/student.jpg" alt="" 
+                class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
             </div>
+
+                <div class="flex flex-1 flex-col py-3">
+                    <h3 class="text-sm font-medium">Book Club - Discussing <i>The God of Small Things</i></h3>
+                    <p class="mt-2 text-xs text-gray-500">10 Aug 2026</p>
+                </div>
+            
+            </div>            
+
+                <!-- event 3  -->
+                <div>
+            <div class="rounded-lg overflow-hidden">
+
+                <!-- image -->
+                <img src="images/basic_membership.jpg" alt="" 
+                class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
+            </div>
+                <div class="flex flex-1 flex-col p-3">
+                    <h3 class="text-sm font-medium">Digital Literacy Workshop - free, no registration needed</h3>
+                    <p class="mt-2 text-xs text-gray-500">18 Aug 2026</p>
+                </div>
+            
+            </div> 
+            
+                <!-- event 4  -->
+                <div>
+            <div class="rounded-lg overflow-hidden">
+
+                <!-- image -->
+                <img src="images/library.jpg" alt="" 
+                class=" h-48 w-full object-cover brightness-95 transform transition-transform duration-300  hover:scale-[1.02]"
+                />
+            </div>
+                <div class="flex flex-1 flex-col p-3">
+                    <h3 class="text-sm font-medium">Author Meet: Priya Sharma - Q&A and book signing</h3>
+                    <p class="mt-2 text-xs text-gray-500">20 Aug 2026</p>
+                </div>
+            
+            </div> 
+            
         </div>
-     </section>
+        
+        </div>
+    </div>   
 </main>
 
 <!-- FOOTER -->
- <footer class="mt-5 bg-gray-50  pt-5">
+ <footer class="bg-gray-50">
 
     <!-- Footer Grid -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 p-5">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 p-5">
 
-        <!-- Company Details -->
-       
-<div class="company_details">
-    <h1 class="text-2xl font-bold my-2 text-gray-800">
-        Greenwood
-    </h1>
+        <!-- Company Details -->  
+        <div class="company_details">
+            <h1 class="text-2xl font-bold my-2 text-gray-800">
+                Greenwood
+            </h1>
 
-    <div class="flex items-center gap-3 py-2">
+            <div class="flex items-center gap-3 py-2">
 
-        <!-- Facebook -->
-        <a href="https://facebook.com"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Facebook"
-           class="w-10 h-10 rounded-full bg-gray-200
-           flex items-center justify-center
-           text-sm font-semibold text-gray-700
-           hover:bg-blue-600 hover:text-white
-           transition-all duration-300">
-            Fb
-        </a>
+                <!-- Facebook -->
+                <a href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                class="w-10 h-10 rounded-full bg-gray-200
+                flex items-center justify-center
+                text-sm font-semibold text-gray-700
+                hover:bg-blue-600 hover:text-white
+                transition-all duration-300">
+                    Fb
+                </a>
 
-        <!-- Instagram -->
-        <a href="https://instagram.com"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Instagram"
-           class="w-10 h-10 rounded-full bg-gray-200
-           flex items-center justify-center
-           text-sm font-semibold text-gray-700
-           hover:bg-pink-600 hover:text-white
-           transition-all duration-300">
-            Ig
-        </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="w-10 h-10 rounded-full bg-gray-200
+                flex items-center justify-center
+                text-sm font-semibold text-gray-700
+                hover:bg-pink-600 hover:text-white
+                transition-all duration-300">
+                    Ig
+                </a>
 
-        <!-- Twitter / X -->
-        <a href="https://x.com"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="X"
-           class="w-10 h-10 rounded-full bg-gray-200
-           flex items-center justify-center
-           text-sm font-semibold text-gray-700
-           hover:bg-black hover:text-white
-           transition-all duration-300">
-            X
-        </a>
+                <!-- Twitter / X -->
+                <a href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                class="w-10 h-10 rounded-full bg-gray-200
+                flex items-center justify-center
+                text-sm font-semibold text-gray-700
+                hover:bg-black hover:text-white
+                transition-all duration-300">
+                    X
+                </a>
 
-    </div>
-</div>
-
+            </div>
+        </div>
 
         <!-- Company Pages -->
         <div class="company_pages text-gray-600">
@@ -741,7 +672,7 @@
                 <li class="my-2">Mon-Fri 8am - 7pm</li>
                 <li class="my-2">Sat: 9am-5pm</li>
             </ul>
-        </div>
+        </div>    
     </div>
  </footer>
 </body>
