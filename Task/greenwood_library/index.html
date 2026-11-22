@@ -63,56 +63,56 @@
  <!-- MAIN -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col gap-10">
-            <!-- 1. HERO SECTION -->
-            <div class="grid grid-cols-1 items-center gap-5 md:grid-cols-2 md:gap-12 py-10">
+        <!-- 1. HERO SECTION -->
+        <div class="grid grid-cols-1 items-center gap-5 md:grid-cols-2 md:gap-12 py-10">
 
-            <!-- Hero Content -->
-            <div class="flex flex-col items-start justify-center">
-                <p class="text-3xl leading-tight text-slate-900 sm:text-5xl lg:text-5xl">
-                    Your Neighbourhood
-                    <br class="hidden sm:block" />
-                    Library.
-                </p>
+        <!-- Hero Content -->
+        <div class="flex flex-col items-start justify-center">
+            <p class="text-3xl leading-tight text-slate-900 sm:text-5xl lg:text-5xl">
+                Your Neighbourhood
+                <br class="hidden sm:block" />
+                Library.
+            </p>
 
-                <p class="my-5 max-w-lg text-base leading-7
-                            text-slate-600 sm:text-lg">
-                    Thousands of books, quiet reading rooms, community
-                    events, and free Wi-Fi — serving Greenwood since 1983.
-                </p>
+            <p class="my-5 max-w-lg text-base leading-7
+                        text-slate-600 sm:text-lg">
+                Thousands of books, quiet reading rooms, community
+                events, and free Wi-Fi — serving Greenwood since 1983.
+            </p>
 
-                <!-- HERO Buttons -->
-                <div class="my-5 flex flex-wrap items-center gap-5">
+            <!-- HERO Buttons -->
+            <div class="my-5 flex sm:flex-col-1 items-center gap-5">
 
-                <a href="#ourSpaces"
-                    class="rounded-full bg-slate-900 px-6 py-3
-                            text-base font-medium text-gray-200
-                            border-2 border-transparent
-                            transition hover:bg-transparent hover:text-black
-                            hover:border-black">
-                            Explore Collection</a>                    
+            <a href="#ourSpaces"
+                class="rounded-full bg-slate-900 px-3 py-2
+                        text-base font-medium text-gray-200
+                        border-2 border-transparent
+                        transition hover:bg-transparent hover:text-black
+                        hover:border-black">
+                        Explore Collection</a>                    
 
-                    <a href="#membership"
-                        class="rounded-full border-2 border-slate-300
-                                px-8 py-3 text-base font-medium text-slate-900
-                                transition hover:border-black hover:text-black
-                                ">
-                                Join Free</a>
-                </div>
+            <a href="#membership"
+                    class="rounded-full border-2 border-slate-300
+                            px-3 py-2 text-base font-medium text-slate-900
+                            transition hover:border-black hover:text-black
+                            ">
+                            Join Free</a>
             </div>
+        </div>
 
-            <!-- Hero Image -->
-            <div class="flex items-center justify-center">
-                <div class="overflow-hidden rounded-2xl">
-                    <img
-                    src="images/library.jpg"
-                    alt="Greenwood library"
-                    class="h-64 w-full rounded-2xl object-cover shadow-lg brightness-85
-                            sm:h-80 md:h-96
-                            transform transition-transform duration-300
-                            hover:scale-102"
-                        />
-                </div>
+        <!-- Hero Image -->
+        <div class="flex items-center justify-center">
+            <div class="overflow-hidden rounded-2xl">
+                <img
+                src="images/library.jpg"
+                alt="Greenwood library"
+                class="h-64 w-full rounded-2xl object-cover shadow-lg brightness-85
+                        sm:h-80 md:h-96
+                        transform transition-transform duration-300
+                        hover:scale-102"
+                    />
             </div>
+        </div>
         </div>
 
     <!-- 2. COMPANY COUNTER DATA -->
@@ -324,7 +324,7 @@
         <h4 class="text-gray-500 uppercase mb-2">membership</h4>
         <div class="border border-gray-200 my-5"></div>
     
-        <div class="flex max-w-7xl items-center justify-between ">
+        <div class="flex flex-wrap items-center justify-between gap-5">
             <h1 class="font-bold text-2xl capitalize">join the Library</h1>
                 <a href="#" class="px-4 py-2 text-sm font-medium rounded-full border-2 border-gray-200 capitalize transition duration-300 hover:bg-black hover:text-white">
                     sign up
@@ -437,7 +437,7 @@
     <!-- 8. Testimonial  -->
     <div class="testimonial mx-auto max-w-4xl px-6 py-10" id="testimonial">
         <div class="py-6 border-t-2 border-t-gray-100">   
-            <div class="flex items-start gap-6 sm:gap-16">
+            <div class="flex flex-col items-start gap-6 sm:gap-16 sm:flex-row">
                     <!-- Profile Image -->
                 <div class="shrink-0 grayscale hover:grayscale-0 border rounded-full p-2">
                     <img src="images/avatar.jpg" alt="testimonial_profile" class="h-20 rounded-full ">
@@ -499,9 +499,9 @@
     <div class="events my-5" id="events">
         <h4 class="text-gray-400 uppercase ">events</h4>
         <div class="border border-gray-200 my-5"></div>
-        <div class="flex max-w-7xl items-center justify-between ">
+        <div class="flex flex-wrap gap-5 max-w-7xl items-center justify-between ">
             <h1 class="font-bold text-2xl capitalize">what's coming up</h1>
-                <a href="#" class="px-2 py-1 text-sm font-medium rounded-full border capitalize transition duration-300 hover:bg-black hover:text-white">
+                <a href="#" class="rounded-full capitalize border-2 border-gray-200 px-4 py-2 text-sm transition duration-300 hover:bg-black hover:text-gray-200">
                     all events
                 </a>
         </div>
@@ -585,8 +585,8 @@
  <footer class="bg-gray-50">
 
     <!-- Footer Grid -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 p-5">
-
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 p-5">
+        
         <!-- Company Details -->  
         <div class="company_details">
             <h1 class="text-2xl font-bold my-2 text-gray-800">
@@ -636,10 +636,9 @@
 
             </div>
         </div>
-
-        <!-- Company Pages -->
-        <div class="company_pages text-gray-600">
-            <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">pages</h1>
+            <!-- Company Pages -->
+        <div class="company_pages text-gray-500">
+            <h1 class="text-lg my-2 capitalize border-b-1 border-b-gray-300 py-2">pages</h1>
             <ul class="list-none">
                 <li class="my-2 nav-link"><a href="/">Home</a></li>
                 <li class="my-2"><a href="#ourSections"  class="nav-link" >Sections</a></li>
@@ -650,7 +649,7 @@
         </div>
 
         <!-- Company Sections -->
-        <div class="company_sections text-gray-600">
+        <div class="company_sections text-gray-500">
             <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">Sections</h1>
             <ul class="list-none">
                 <li class="my-2"><a href="#"  class="nav-link">Fiction</a></li>
@@ -663,8 +662,8 @@
         </div>
 
         <!-- Company Contact Details -->
-        <div class="company_contact text-gray-600">
-            <h1 class="text-lg font-semibold my-2 capitalize border-b-1 border-b-gray-300 py-2">Details</h1>
+        <div class="company_contact text-gray-500 font-semibold">
+            <h1 class="text-lg my-2 capitalize border-b-1 border-b-gray-300 py-2">Details</h1>
             <ul class="list-none text-gray-400">
                 <li class="my-2">Bengaluru, India</li>
                 <li class="my-2">+91 1234567890-</li>
@@ -674,6 +673,13 @@
             </ul>
         </div>    
     </div>
+
+     <div class="border border-gray-200"></div>
+
+    <!-- Copyright -->
+     <div class="text-center text-gray-500 py-5">
+        <p>&copy; 2026 Greenwood Library. All rights reserved.</p>
+     </div>
  </footer>
 </body>
 <script>
