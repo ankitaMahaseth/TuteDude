@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Shopping Cart | Thala 7</title>
+   <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   <div class="main-wrapper">
+        <!-- Navbar -->
+        <header class="header">
+              <!-- Navbar -->
+            <nav class="navbar">
+                <a href="index.html" class="logo">Thala <span>7.</span></a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                            <a href="#">Brands ▾</a>
+
+                            <ul class="dropdown">
+                                <li><a href="#">Shoes</a></li>
+
+                                <li>
+                                    <a href="#">Fashion ▸</a>
+
+                                    <ul class="dropdown">
+                                        <li><a href="#">Men</a></li>
+
+                                        <li>
+                                            <a href="#">Women ▸</a>
+
+                                            <ul class="dropdown">
+                                                <li><a href="#">Running Shoes</a></li>
+                                                <li><a href="#">Walking Shoes</a></li>
+                                                <li><a href="#">Stylish Shoes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    <li><a href="#">More</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" placeholder="Search" name="search"/>
+                    </div>
+
+                    <div class="cart">
+                        <a href="shopping_cart.html">
+                            <div class="cart-box">
+                                <span><i class="fa-solid fa-basket-shopping"></i></span>
+                                <small>0</small>
+                            </div> 
+                        </a>  
+                    </div>
+                        <a href="">
+                            <img
+                            src="images/profile.png"
+                            alt="User profile"
+                            class="profile-img"/>
+                        </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="shopping-section">
+            <h1>Shopping Cart</h1>
+            <section class="cart-layout" aria-label="Shopping cart">
+                <div class="products">
+                    <div class="table-head"><span>Product</span><span style="text-align:center">Quantity</span><span>Price</span><span></span></div>
+                    <div id="product-list">
+                    <div class="product-row" data-price="4999"><span class="product-name">Seven By M.S.Dhoni W...</span><div class="quantity"><button aria-label="Decrease quantity">−</button><b>1</b><button aria-label="Increase quantity">+</button></div><span class="price">₹4,999</span><button class="remove" aria-label="Remove product">X</button></div>
+                    <div class="product-row" data-price="4999"><span class="product-name">Seven By M.S.Dhoni W...</span><div class="quantity"><button aria-label="Decrease quantity">−</button><b>1</b><button aria-label="Increase quantity">+</button></div><span class="price">₹4,999</span><button class="remove" aria-label="Remove product">X</button></div>
+                    <div class="product-row" data-price="4999"><span class="product-name">Seven By M.S.Dhoni W...</span><div class="quantity"><button aria-label="Decrease quantity">−</button><b>1</b><button aria-label="Increase quantity">+</button></div><span class="price">₹4,999</span><button class="remove" aria-label="Remove product">X</button></div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="summary">
+                    <label class="coupon-label" for="coupon">Enter Coupon Code</label>
+                    <div class="coupon-row">
+                        <input id="coupon" type="text" placeholder="COUPON CODE" />
+                        <button class="apply" id="apply-coupon">Apply Coupon</button>
+                    </div>
+                    <div class="notice" id="notice" aria-live="polite"></div>
+                    <div class="totals">
+                        <div class="total-line"><span>Sub Total</span><strong id="subtotal">₹4,700</strong></div>
+                        <div class="total-line"><span>Taxes (if applicable)</span><strong id="taxes">₹199</strong></div>
+                        <div class="total-line"><span>Discount</span><strong id="discount">₹0</strong></div>
+                        <div class="total-line grand"><span>Total</span><strong id="total">₹4,999</strong></div>
+                    </div>
+                    </div>
+                    <button class="pay" id="pay-button"><a href="payment.html">Pay Now&nbsp; ₹4,999</a></button>
+                    <div class="payment-logos" aria-label="Secure payment partners">
+                    <div class="secure">◆ SECURE<br/>PAYMENT</div>
+                    <div class="razorpay">◢Razorpay</div>
+                    <div class="secure">♜ SECURE<br/>PAYMENT</div>
+                    </div>
+                </aside>
+        </section>
+        <a class="continue" href="#"><span>‹</span> Continue Shopping</a>
+        </div>
+    </div>
+
+   
+</body>
+</html>

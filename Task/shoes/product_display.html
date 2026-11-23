@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala 7 - Shoe Store</title>
+    <link rel="stylesheet" href="css/style.css">
+     <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Navbar -->
+        <header class="header">
+              <!-- Navbar -->
+            <nav class="navbar">
+                <a href="index.html" class="logo">Thala <span>7.</span></a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                            <a href="#">Brands ▾</a>
+
+                            <ul class="dropdown">
+                                <li><a href="#">Shoes</a></li>
+
+                                <li>
+                                    <a href="#">Fashion ▸</a>
+
+                                    <ul class="dropdown">
+                                        <li><a href="#">Men</a></li>
+
+                                        <li>
+                                            <a href="#">Women ▸</a>
+
+                                            <ul class="dropdown">
+                                                <li><a href="#">Running Shoes</a></li>
+                                                <li><a href="#">Walking Shoes</a></li>
+                                                <li><a href="#">Stylish Shoes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    <li><a href="#">More</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" placeholder="Search" name="search"/>
+                    </div>
+
+                    <div class="cart">
+                        <a href="shopping_cart.html">
+                            <div class="cart-box">
+                                <span><i class="fa-solid fa-basket-shopping"></i></span>
+                                <small>0</small>
+                            </div> 
+                        </a>  
+                    </div>
+                        <a href="#">
+                            <img
+                            src="images/profile.png"
+                            alt="User profile"
+                            class="profile-img"/>
+                        </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="product-display-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="#">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <a href="#">THALA FOR A REASON</a>
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>Seven By M.S.Dhoni Women's Hogun Multi-Color Running Shoes</span>
+            </div>
+
+
+            <!-- Product Section -->
+            <section class="product-section">
+
+                <!-- Left Product Images -->
+                <div class="product-gallery">
+
+                    <div class="main-image">
+                        <img src="images/shoes.png" alt="Seven Running Shoe">
+                    </div>
+
+                    <!-- Thumbnail Images -->
+                    <div class="thumbnail-container">
+
+                        <div class="thumbnail active">
+                            <img src="images/shoes.png" alt="Shoe side view">
+                        </div>
+
+                        <div class="thumbnail">
+                            <img src="images/shoes.png" alt="Shoe front view">
+                        </div>
+
+                        <div class="thumbnail">
+                            <img src="images/shoes.png" alt="Shoe back view">
+                        </div>
+
+                        <div class="thumbnail">
+                            <img src="images/shoes.png" alt="Shoe sole view">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right Product Information -->
+                <div class="product-details">
+
+                    <h1>
+                        Seven By M.S.Dhoni Women's Hogun Multi-Color Running Shoes
+                    </h1>
+
+                    <p class="description">
+                        For exceptional fit, feel and smooth transitions get going
+                        with these dual mid sole technology shoes constructed with
+                        molded EVA sock liner, gel at heel area, rubber outsole,
+                        fused upper and breathable mesh.
+                    </p>
+
+
+                    <!-- Price Section -->
+                    <div class="price-section">
+
+                        <div class="price">
+                            <span class="rupee">₹</span> 1,334
+                        </div>
+
+                        <div class="discount">
+                            <h3>Save 12%</h3>
+                            <p>Inclusive of all Taxes</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Cart Actions -->
+                    <div class="cart-actions">
+
+                        <select class="quantity">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                        <button class="add-cart-btn">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            ADD TO CART
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>

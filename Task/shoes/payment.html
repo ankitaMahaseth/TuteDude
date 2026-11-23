@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- Navbar -->
+        <header class="header">
+              <!-- Navbar -->
+            <nav class="navbar">
+                <a href="index.html" class="logo">Thala <span>7.</span></a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                            <a href="#">Brands ▾</a>
+
+                            <ul class="dropdown">
+                                <li><a href="#">Shoes</a></li>
+
+                                <li>
+                                    <a href="#">Fashion ▸</a>
+
+                                    <ul class="dropdown">
+                                        <li><a href="#">Men</a></li>
+
+                                        <li>
+                                            <a href="#">Women ▸</a>
+
+                                            <ul class="dropdown">
+                                                <li><a href="#">Running Shoes</a></li>
+                                                <li><a href="#">Walking Shoes</a></li>
+                                                <li><a href="#">Stylish Shoes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    <li><a href="#">More</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" placeholder="Search" name="search"/>
+                    </div>
+
+                    <div class="cart">
+                        <a href="shopping_cart.html">
+                            <div class="cart-box">
+                                <span><i class="fa-solid fa-basket-shopping"></i></span>
+                                <small>0</small>
+                            </div> 
+                        </a>  
+                    </div>
+                        <a href="">
+                            <img
+                            src="images/profile.png"
+                            alt="User profile"
+                            class="profile-img"/>
+                        </a>
+                </div>
+            </nav>
+        </header>
+        <div class="checkout">
+        <section class="left-panel">
+            <p class="eyebrow">Checkout</p>
+            <section class="contact">
+                <h2>Contact Details</h2>
+                <label for="email">Email ID</label>
+                <input id="email" type="email"
+                    placeholder="John Doe" autocomplete="email">
+            </section>
+            <section>
+                <h2 class="payment-title">Payment</h2>
+                <div class="payment-card">
+                    <div class="methods" role="group" aria-label="Payment method">
+                        <button class="method active" type="button" data-method="Card"><span
+                                class="symbol">▤</span><span>Card</span></button>
+                        <button class="method" type="button" data-method="Crypto"><span
+                                class="symbol">₿</span><span>Crypto</span></button>
+                        <button class="method" type="button" data-method="Bank"><span
+                                class="symbol">♜</span><span>Bank</span></button>
+                        <button class="method more" type="button" aria-label="More payment methods">⋮</button>
+                    </div>
+                    <div class="field"><label for="card-number">Card Number</label><input id="card-number" type="text"
+                            placeholder="John Doe" autocomplete="cc-number"></div>
+                    <div class="two-col">
+                        <div class="field"><label for="expiry">Expiry</label><input id="expiry" type="text"
+                                placeholder="MM/YY" autocomplete="cc-exp"></div>
+                        <div class="field"><label for="cvc">CVC</label><input id="cvc" type="password" placeholder="•••"
+                                autocomplete="cc-csc"></div>
+                    </div>
+                    <div class="two-col">
+                        <div class="field"><label for="country">Country</label><select id="country">
+                                <option>India</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>Canada</option>
+                                <option>Australia</option>
+                            </select></div>
+                        <div class="field"><label for="zip">ZIP</label><input id="zip" type="text" placeholder="XXXXX"
+                                autocomplete="postal-code"></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <aside class="right-panel">
+            <div class="right-inner">
+                <h1 class="summary-title">Order Summary</h1>
+                <section class="summary-box">
+                    <label class="coupon-label" for="coupon">Enter Coupon Code</label>
+                    <div class="coupon-row"><input id="coupon" type="text" placeholder="COUPON CODE"><button
+                            class="apply" id="apply-coupon" type="button">Apply Coupon</button></div>
+                    <div class="totals">
+                        <div class="total-row"><span>Sub Total</span><strong>₹4,700</strong></div>
+                        <div class="total-row"><span>Taxes(if applicable)</span><strong>₹199</strong></div>
+                        <div class="total-row"><span>Discount</span><strong id="discount">₹0</strong></div>
+                        <div class="total-row grand"><span>Total</span><strong id="total">₹4,999</strong></div>
+                    </div>
+                    <p class="notice" id="notice" aria-live="polite"></p>
+                </section>
+                <button class="pay" type="button">Pay Now&nbsp; ₹<span id="pay-total"><a href="payment.html">4,999</a></span></button>
+                <div class="trust-logos" aria-label="Secure payment by Razorpay">
+                    <div class="secure">🛡 SECURE<span>SSL ENCRYPTED</span></div>
+                    <div style="font-size:15px">◢Razorpay</div>
+                    <div class="secure">🛡 SECURE<span>PAYMENT</span></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+        </div>
+    
+</body>
+
+</html>
